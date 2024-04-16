@@ -22,7 +22,6 @@ return new class extends Migration
             $table->integer('need');
             $table->integer('collected');
             $table->foreignId('link_to_detail_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
-            $table->string('image');
             $table->timestamps();
         });
     }
