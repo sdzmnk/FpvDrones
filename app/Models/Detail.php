@@ -30,5 +30,9 @@ class Detail extends Model implements HasMedia
 
     ];
 
+    public function link_to_detail()
+    {
+        return $this->hasMany(LinkToDetail::class);
+    }
 
 }

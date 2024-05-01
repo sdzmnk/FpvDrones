@@ -30,21 +30,21 @@
   min-height: 100vh;
 }
 .container .header {
+  padding: 2.08vw 4.16vw 0 4.16vw;
   margin-bottom: 140px;
 }
 .container .header .nav {
   width: auto;
   display: flex;
   justify-content: space-between;
-  padding: 2.08vw 4.16vw 0 4.16vw;
+  margin-bottom: 25px;
 }
 .container .header .nav .burger__container {
   display: none;
 }
-.container .header .nav .header__liFirst {
-  font: bold 28px "e-Ukraine";
-  color: #1A5653;
-  margin-right: 40px;
+.container .header .nav .header__logo {
+  width: 250px;
+  height: 100%;
 }
 .container .header .nav .header__ol {
   display: flex;
@@ -56,43 +56,41 @@
 }
 .container .header .nav .header__ol .header__li a {
   text-decoration: none;
-  font: 400 24px "Manrope";
+  font: 400 22px "Manrope";
   color: #1A5653;
 }
+.container .header .nav .header__ol .header__li a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #1A5653;
+}
+.container .header .nav .header__ol .header__li .last_a:hover {
+  border-bottom: 0;
+}
 .container .header .nav .header__ol .header__li:last-child {
+  display: flex;
+  align-items: center;
   margin: 0;
   cursor: pointer;
 }
-.container .header .header__section {
-  height: 90%;
+.container .header .nav .header__ol .header__li:last-child a {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.container .header .header__section div h1 {
-  font: 700 64px "e-Ukraine";
-  color: rgba(11, 10, 10, 0.5568627451) 8;
-  margin-bottom: 50px;
+.container .header .nav .header__ol .header__li:last-child a span {
+  margin-right: 15px;
+  border-bottom: 1px solid black;
 }
-.container .header .header__section div p {
-  font: 400 32px "Manrope";
-  color: #1A5653;
-  text-align: center;
-  margin-bottom: 90px;
+.container .header .nav .header__ol .header__li:last-child a img {
+  width: 2.5vw;
+  height: 2.5vw;
 }
-.container .header .header__section div div {
-  display: flex;
-  justify-content: center;
-}
-.container .header .header__section div div button {
-  padding: 24px 60px;
-  background: #1A5653;
-  border-radius: 999px;
-}
-.container .header .header__section div div button a {
+.container .header .header__navigation a, .container .header .header__navigation p {
+  color: grey;
   text-decoration: none;
-  text-align: center;
-  font: 600 24px "Manrope";
+  display: inline;
+  font: 400 18px "Manrope";
+}
+.container .header .header__navigation p {
   color: #1A5653;
 }
 .container .main {
@@ -141,7 +139,8 @@
   font: 400 24px "Manrope";
 }
 .container .main .main__section1 .section1__wrapper .section1__block2 .block2__wrapper2 .block2__changeInfo {
-  padding: 24px 60px;
+  height: min-content;
+  padding: 14px 60px;
   background: #1A5653;
   border-radius: 999px;
 }
@@ -151,7 +150,7 @@
   color: #fff;
 }
 .container .footer {
-  padding: 3.12vw 4.16vw 6.25vw 4.16vw;
+  padding: 3.12vw 6.16vw 4.25vw 4.16vw;
   background: rgb(26, 86, 83);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -160,21 +159,24 @@
   display: flex;
   justify-content: space-between;
 }
-.container .footer div .header__liFirst {
-  font: bold 28px "e-Ukraine";
-  color: #fff;
+.container .footer div .header__logo {
+  width: 250px;
+  height: 55px;
 }
 .container .footer div .footer_wrapper {
   display: flex;
 }
 .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
-  color: rgb(245, 245, 245);
   font: 300 20px "Manrope";
+  color: rgb(245, 245, 245);
   margin-bottom: 20px;
 }
 .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
   text-decoration: none;
   color: rgb(245, 245, 245);
+}
+.container .footer div .footer_wrapper .footer__list1 li a:hover, .container .footer div .footer_wrapper .footer__list2 li a:hover {
+  border-bottom: 1.5px solid #fff;
 }
 .container .footer div .footer_wrapper .footer__list1 {
   margin-right: 11.97vw;
@@ -190,18 +192,18 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1610px) {
   .container .header {
     margin-bottom: 70px;
   }
   .container .header .nav {
     display: flex;
     justify-content: space-between;
-    padding: 2.08vw 4.16vw 0 4.16vw;
+    margin-bottom: 25px;
   }
-  .container .header .nav .header__liFirst {
-    font: bold 24px "e-Ukraine";
-    margin-right: 40px;
+  .container .header .nav .header__logo {
+    width: 200px;
+    margin-right: 30px;
   }
   .container .header .nav .header__ol {
     display: flex;
@@ -217,34 +219,70 @@
   .container .header .nav .header__ol .header__li:last-child {
     margin: 0;
   }
-  .container .header .header__section {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  .container .header .header__navigation {
+    color: #1A5653;
   }
-  .container .header .header__section div h1 {
-    font: 700 38px "e-Ukraine";
-    margin-bottom: 50px;
-  }
-  .container .header .header__section div p {
-    font: 400 20px "Manrope";
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .container .header .header__section div div {
-    display: flex;
-    justify-content: center;
-  }
-  .container .header .header__section div div button {
-    border: 0;
-    padding: 8px 30px;
-    border-radius: 999px;
-  }
-  .container .header .header__section div div button a {
+  .container .header .header__navigation a, .container .header .header__navigation p {
+    color: grey;
     text-decoration: none;
-    text-align: center;
-    font: 600 20px "Manrope";
-    color: #000;
+    display: inline;
+    font: 400 14px "Manrope";
+  }
+  .container .footer {
+    padding: 3.12vw 3.16vw 3.25vw 3.16vw;
+  }
+  .container .footer div .header__logo {
+    width: 200px;
+    height: 44px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+    font: 300 14px "Manrope";
+    margin-bottom: 10px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:first-child {
+    font: 500 16px "Manrope";
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container .header {
+    margin-bottom: 70px;
+  }
+  .container .header .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .container .header .nav .header__logo {
+    width: 120px;
+    margin-right: 30px;
+  }
+  .container .header .nav .header__ol {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 12px "Manrope";
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    margin: 0;
+  }
+  .container .header .header__navigation a, .container .header .header__navigation p {
+    color: grey;
+    text-decoration: none;
+    display: inline;
+    font: 400 10px "Manrope";
+  }
+  .container .header .header__navigation p {
+    color: #1A5653;
   }
   .container .main {
     overflow: auto;
@@ -305,43 +343,36 @@
     color: #fff;
   }
   .container .footer {
-    padding: 4.12vw 7.16vw 6.25vw 4.16vw;
-    background: rgb(26, 86, 83);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    padding: 3.12vw 5.16vw 3.25vw 4.16vw;
   }
-  .container .footer div {
-    display: flex;
-    justify-content: space-between;
-  }
-  .container .footer div .header__liFirst {
-    font: bold 20px "e-Ukraine";
-    color: #fff;
-    margin-right: 40px;
+  .container .footer div .header__logo {
+    width: 120px;
+    height: 27px;
   }
   .container .footer div .footer_wrapper {
-    display: flex;
+    height: 110px;
+  }
+  .container .footer div .footer_wrapper .footer__list1, .container .footer div .footer_wrapper .footer__list2 {
+    height: 100%;
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
-    font: 300 14px "Manrope";
-    margin-bottom: 20px;
+    font: 300 10px "Manrope";
+    margin-bottom: 5px;
   }
   .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
     text-decoration: none;
     color: rgb(245, 245, 245);
   }
   .container .footer div .footer_wrapper .footer__list1 {
-    margin-right: 7.97vw;
+    display: flex;
+    flex-direction: column;
   }
   .container .footer div .footer_wrapper .footer__list1 li:first-child {
-    font: 500 16px "Manrope";
-    margin-bottom: 60px;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li:last-child {
-    margin: 0;
-  }
-  .container .footer div .footer_wrapper .footer__list2 li:last-child {
-    margin: 0;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    font: 500 12px "Manrope";
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 1050px) {
@@ -351,11 +382,6 @@
   .container .header .nav {
     display: flex;
     justify-content: space-between;
-    padding: 2.08vw 4.16vw 0 4.16vw;
-  }
-  .container .header .nav .header__liFirst {
-    font: bold 16px "e-Ukraine";
-    margin-right: 40px;
   }
   .container .header .nav .header__ol {
     display: flex;
@@ -369,41 +395,24 @@
     font: 400 10px "Manrope";
   }
   .container .header .nav .header__ol .header__li:last-child {
-    margin: 0;
-  }
-  .container .header .nav .header__ol .header__li:last-child img {
-    width: 30px;
-    height: 30px;
-  }
-  .container .header .header__section {
+    display: flex;
     align-items: center;
+    margin: 0;
+    cursor: pointer;
+  }
+  .container .header .nav .header__ol .header__li:last-child a {
     display: flex;
-    justify-content: center;
-    height: 370px;
+    align-items: center;
   }
-  .container .header .header__section div h1 {
-    font: 700 23px "e-Ukraine";
-    margin-bottom: 20px;
+  .container .header .nav .header__ol .header__li:last-child a span {
+    margin-right: 10px;
   }
-  .container .header .header__section div p {
-    font: 400 14px "Manrope";
-    text-align: center;
-    margin-bottom: 20px;
+  .container .header .nav .header__ol .header__li:last-child a img {
+    width: 2.5vw;
+    height: 2.5vw;
   }
-  .container .header .header__section div div {
-    display: flex;
-    justify-content: center;
-  }
-  .container .header .header__section div div button {
-    border: 0;
-    padding: 4px 15px;
-    border-radius: 999px;
-  }
-  .container .header .header__section div div button a {
-    text-decoration: none;
-    text-align: center;
-    font: 600 14px "Manrope";
-    color: #000;
+  .container .header .header__navigation a, .container .header .header__navigation p {
+    font-size: 8px;
   }
   .container .main {
     overflow: auto;
@@ -463,67 +472,28 @@
     font: 600 12px "Manrope";
     color: #fff;
   }
-  .container .footer {
-    padding: 4.12vw 7.16vw 6.25vw 4.16vw;
-    background: rgb(26, 86, 83);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-  }
-  .container .footer div {
-    display: flex;
-    justify-content: space-between;
-  }
-  .container .footer div .header__liFirst {
-    font: bold 20px "e-Ukraine";
-    color: #fff;
-    margin-right: 40px;
-  }
-  .container .footer div .footer_wrapper {
-    display: flex;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
-    font: 300 14px "Manrope";
-    margin-bottom: 20px;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
-    text-decoration: none;
-    color: rgb(245, 245, 245);
-  }
-  .container .footer div .footer_wrapper .footer__list1 {
-    margin-right: 7.97vw;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li:first-child {
-    font: 500 16px "Manrope";
-    margin-bottom: 60px;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li:last-child {
-    margin: 0;
-  }
-  .container .footer div .footer_wrapper .footer__list2 li:last-child {
-    margin: 0;
-  }
 }
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 772px) {
   .container {
     overflow: hidden;
   }
   .container .header {
+    padding: 4.16vw 4.16vw 0 4.16vw;
     overflow: hidden;
     position: relative;
     margin-bottom: 40px;
+    height: auto;
   }
   .container .header .nav {
     position: relative;
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    padding: 2.08vw 4.16vw 0 4.16vw;
+    height: auto;
   }
-  .container .header .nav .header__liFirst {
+  .container .header .nav .header__logo_off {
     display: none;
-    font: bold 16px "e-Ukraine";
-    color: #fff;
-    margin-right: 0;
+  }
+  .container .header .nav .header__logo {
+    margin: 0;
   }
   .container .header .nav .burger__container {
     display: block;
@@ -538,11 +508,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper {
     width: 30px;
@@ -565,9 +536,11 @@
   }
   .container .header .nav .burger__container .burger__block2 {
     display: none;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    height: min-content;
   }
   .container .header .nav .burger__container .burger__block2 .header__ol1 {
     position: static;
@@ -607,43 +580,6 @@
   .container .header .nav .header__ol .header__li:last-child img {
     width: 30px;
     height: 30px;
-  }
-  .container .header .header__section {
-    display: flex;
-    justify-content: center;
-    height: 60%;
-  }
-  .container .header .header__section div div {
-    text-align: center;
-  }
-  .container .header .header__section div div h1 {
-    width: min-content;
-    font: 700 23px "e-Ukraine";
-    color: #fff;
-    margin-bottom: 20px;
-    display: block;
-  }
-  .container .header .header__section div p {
-    font: 400 14px "Manrope";
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .container .header .header__section div div {
-    display: flex;
-    justify-content: center;
-  }
-  .container .header .header__section div div button {
-    border: 0;
-    padding: 4px 15px;
-    background: #fff;
-    border-radius: 999px;
-  }
-  .container .header .header__section div div button a {
-    text-decoration: none;
-    text-align: center;
-    font: 600 14px "Manrope";
-    color: #000;
   }
   .container .main {
     display: flex;
@@ -712,30 +648,20 @@
     color: #fff;
   }
   .container .footer {
-    display: flex;
-    padding: 3.12vw 4.16vw 6.25vw 4.16vw;
-    background: rgb(26, 86, 83);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    padding: 3.12vw 6.16vw 3.25vw 4.16vw;
   }
-  .container .footer div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .container .footer div .header__liFirst {
-    display: block;
-    text-align: center;
-    font: bold 18px "e-Ukraine";
-    color: #fff;
-    margin-bottom: 20px;
+  .container .footer div .header__logo {
+    width: 120px;
+    height: 27px;
   }
   .container .footer div .footer_wrapper {
-    width: auto;
-    display: flex;
+    height: 90px;
+  }
+  .container .footer div .footer_wrapper .footer__list1, .container .footer div .footer_wrapper .footer__list2 {
+    height: 100%;
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
-    font: 300 11px "Manrope";
+    font: 300 8px "Manrope";
     margin-bottom: 5px;
   }
   .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
@@ -743,38 +669,29 @@
     color: rgb(245, 245, 245);
   }
   .container .footer div .footer_wrapper .footer__list1 {
-    margin-right: 3vw;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
   }
   .container .footer div .footer_wrapper .footer__list1 li:first-child {
-    font: 500 12px "Manrope";
-    margin-bottom: 20px;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li:last-child {
-    margin: 0;
-  }
-  .container .footer div .footer_wrapper .footer__list2 li:last-child {
-    margin: 0;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    font: 500 10px "Manrope";
+    margin-bottom: 0;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .container .header {
     overflow: hidden;
     position: relative;
     margin-bottom: 40px;
+    padding: 4.16vw 4.16vw 0 4.16vw;
   }
   .container .header .nav {
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    padding: 2.08vw 4.16vw 0 4.16vw;
-  }
-  .container .header .nav .header__liFirst {
-    display: none;
-    font: bold 16px "e-Ukraine";
-    color: #fff;
-    margin-right: 0;
   }
   .container .header .nav .burger__container {
     display: block;
@@ -789,7 +706,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block {
     display: flex;
@@ -816,9 +732,6 @@
   }
   .container .header .nav .burger__container .burger__block2 {
     display: none;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
   }
   .container .header .nav .burger__container .burger__block2 .header__ol1 {
     position: static;
@@ -858,43 +771,6 @@
   .container .header .nav .header__ol .header__li:last-child img {
     width: 30px;
     height: 30px;
-  }
-  .container .header .header__section {
-    display: flex;
-    justify-content: center;
-    height: 60%;
-  }
-  .container .header .header__section div div {
-    text-align: center;
-  }
-  .container .header .header__section div div h1 {
-    width: min-content;
-    font: 700 23px "e-Ukraine";
-    color: #fff;
-    margin-bottom: 20px;
-    display: block;
-  }
-  .container .header .header__section div p {
-    font: 400 14px "Manrope";
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .container .header .header__section div div {
-    display: flex;
-    justify-content: center;
-  }
-  .container .header .header__section div div button {
-    border: 0;
-    padding: 4px 15px;
-    background: #fff;
-    border-radius: 999px;
-  }
-  .container .header .header__section div div button a {
-    text-decoration: none;
-    text-align: center;
-    font: 600 14px "Manrope";
-    color: #000;
   }
   .container .main {
     display: block;
@@ -966,22 +842,17 @@
     display: flex;
     justify-content: center;
     padding: 40px 0;
-    background: rgb(26, 86, 83);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
   .container .footer div {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .container .footer div .header__liFirst {
-    display: block;
-    text-align: center;
-    font: bold 18px "e-Ukraine";
-    color: #fff;
-    margin: 0;
+  .container .footer div .header__logo {
     margin-bottom: 20px;
   }
   .container .footer div .footer_wrapper {
+    height: auto;
     display: block;
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
@@ -989,22 +860,17 @@
     font: 300 9px "Manrope";
     margin-bottom: 5px;
   }
-  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
-    text-decoration: none;
-    color: rgb(245, 245, 245);
-  }
   .container .footer div .footer_wrapper .footer__list1 {
     margin-right: 0;
     margin-bottom: 20px;
+    height: min-content;
   }
   .container .footer div .footer_wrapper .footer__list1 li:first-child {
     font: 500 10px "Manrope";
     margin-bottom: 12px;
+    flex: 0;
   }
   .container .footer div .footer_wrapper .footer__list1 li:last-child {
-    margin: 0;
-  }
-  .container .footer div .footer_wrapper .footer__list2 li:last-child {
     margin: 0;
   }
 }/*# sourceMappingURL=SettingProfile.css.map */

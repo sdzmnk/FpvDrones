@@ -27,12 +27,13 @@
 }
 .container .header {
   margin-bottom: 140px;
+  padding: 2.08vw 4.16vw 0 4.16vw;
 }
 .container .header .nav {
   width: auto;
   display: flex;
   justify-content: space-between;
-  padding: 2.08vw 4.16vw 0 4.16vw;
+  margin-bottom: 15px;
 }
 .container .header .nav .burger__container {
   display: none;
@@ -52,47 +53,24 @@
 }
 .container .header .nav .header__ol .header__li a {
   text-decoration: none;
-  font: 400 24px "Manrope";
+  font: 400 1.1vw "Manrope";
   color: #1A5653;
 }
 .container .header .nav .header__ol .header__li:last-child {
   margin: 0;
   cursor: pointer;
 }
-.container .header .header__section {
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container .header .header__section div h1 {
-  font: 700 64px "e-Ukraine";
-  color: rgba(11, 10, 10, 0.5568627451) 8;
-  margin-bottom: 50px;
-}
-.container .header .header__section div p {
-  font: 400 32px "Manrope";
-  color: #1A5653;
-  text-align: center;
-  margin-bottom: 90px;
-}
-.container .header .header__section div div {
-  display: flex;
-  justify-content: center;
-}
-.container .header .header__section div div button {
-  padding: 24px 60px;
-  background: #1A5653;
-  border-radius: 999px;
-}
-.container .header .header__section div div button a {
+.container .header .header__navigation a {
+  color: black;
   text-decoration: none;
-  text-align: center;
-  font: 600 24px "Manrope";
-  color: #1A5653;
+  display: inline;
+  font: 400 1.1vw "Manrope";
+}
+.container .header .header__navigation a:first-child {
+  color: grey;
 }
 .container .main .main__section1 {
-  padding: 0 80px 0 80px;
+  padding: 0 4vw;
   margin-bottom: 106px;
 }
 .container .main .main__section1 .section1__container .section1__block_info {
@@ -204,7 +182,6 @@
   .container .header .nav {
     display: flex;
     justify-content: space-between;
-    padding: 2.08vw 4.16vw 0 4.16vw;
   }
   .container .header .nav .header__liFirst {
     font: bold 24px "e-Ukraine";
@@ -254,7 +231,7 @@
     color: #000;
   }
   .container .main .main__section1 {
-    padding: 0 80px 0 80px;
+    padding: 0 4vw;
     margin-bottom: 106px;
   }
   .container .main .main__section1 .section1__container .section1__block_info {
@@ -263,7 +240,7 @@
     margin-bottom: 70px;
   }
   .container .main .main__section1 .section1__container .section1__block_info .section1__block_title {
-    font: 700 48px "e-Ukraine";
+    font: 700 38px "e-Ukraine";
     color: rgb(0, 21, 24);
   }
   .container .main .main__section1 .section1__container .section1__block_info div {
@@ -366,7 +343,6 @@
   .container .header .nav {
     display: flex;
     justify-content: space-between;
-    padding: 2.08vw 4.16vw 0 4.16vw;
   }
   .container .header .nav .header__liFirst {
     font: bold 16px "e-Ukraine";
@@ -381,7 +357,7 @@
   }
   .container .header .nav .header__ol .header__li a {
     text-decoration: none;
-    font: 400 10px "Manrope";
+    font: 400 11px "Manrope";
   }
   .container .header .nav .header__ol .header__li:last-child {
     margin: 0;
@@ -420,6 +396,9 @@
     font: 600 14px "Manrope";
     color: #000;
   }
+  .container .header .header__navigation a {
+    font-size: 11px;
+  }
   .container .main .main__section1 {
     padding: 0 4vw;
     margin-bottom: 106px;
@@ -430,7 +409,7 @@
     margin-bottom: 70px;
   }
   .container .main .main__section1 .section1__container .section1__block_info .section1__block_title {
-    font: 700 48px "e-Ukraine";
+    font: 700 38px "e-Ukraine";
     color: rgb(0, 21, 24);
   }
   .container .main .main__section1 .section1__container .section1__block_info div {
@@ -526,7 +505,7 @@
     margin: 0;
   }
 }
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 768px) {
   .container {
     overflow: hidden;
   }
@@ -536,6 +515,7 @@
     margin-bottom: 40px;
   }
   .container .header .nav {
+    margin-bottom: 0;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -551,7 +531,7 @@
   .container .header .nav .burger__container {
     display: block;
     box-sizing: border-box;
-    padding: 20px 20px 0 20px;
+    padding: 0;
     width: 100%;
     height: auto;
     position: relative;
@@ -561,9 +541,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block {
+    cursor: pointer;
     display: flex;
     align-items: center;
   }
@@ -620,7 +601,7 @@
   }
   .container .header .nav .header__ol .header__li a {
     text-decoration: none;
-    font: 400 10px "Manrope";
+    font: 400 11px "Manrope";
     color: #fff;
   }
   .container .header .nav .header__ol .header__li:last-child {
@@ -630,43 +611,6 @@
   .container .header .nav .header__ol .header__li:last-child img {
     width: 30px;
     height: 30px;
-  }
-  .container .header .header__section {
-    display: flex;
-    justify-content: center;
-    height: 60%;
-  }
-  .container .header .header__section div div {
-    text-align: center;
-  }
-  .container .header .header__section div div h1 {
-    width: min-content;
-    font: 700 23px "e-Ukraine";
-    color: #fff;
-    margin-bottom: 20px;
-    display: block;
-  }
-  .container .header .header__section div p {
-    font: 400 14px "Manrope";
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .container .header .header__section div div {
-    display: flex;
-    justify-content: center;
-  }
-  .container .header .header__section div div button {
-    border: 0;
-    padding: 4px 15px;
-    background: #fff;
-    border-radius: 999px;
-  }
-  .container .header .header__section div div button a {
-    text-decoration: none;
-    text-align: center;
-    font: 600 14px "Manrope";
-    color: #000;
   }
   .container .main .main__section1 {
     padding: 0 5vw;
@@ -805,7 +749,7 @@
   .container .header .nav .burger__container {
     display: block;
     box-sizing: border-box;
-    padding: 20px 20px 0 20px;
+    padding: 0;
     width: 100%;
     height: auto;
     position: relative;

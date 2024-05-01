@@ -17,4 +17,9 @@ class LinkToDetail extends Model
         'link',
         'description',
     ];
+
+    public function detail() {
+        return $this->belongsTo(Detail::class);
+    }
+
 }

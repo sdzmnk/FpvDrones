@@ -23,24 +23,24 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <h1 class="header__liFirst1">DragonLab<br>DRONES</h1>
-                        <a class="burger__profile" href="/img/user accountGREEN.png"><img src="/img/user accountGREEN.png"
-                                alt=""></a>
+                        <img class="header__logo " src="/img/logo-title_Green.png"/>
+                        <a class="burger__profile" href="/html/MyProfile.html">
+                            <img src="/img/userAccountBgGreen.png"alt="">
+                        </a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
                             <li class="header__li1"><a href="/html/Main.html" class="">Головна</a></li>
                             <li class="header__li1"><a href="/html/Main.html#aboutUs" class="">Про нас</a></li>
                             <li class="header__li1"><a href="/html/Main.html#help" class="">Як допомогти</a></li>
-                            <li class="header__li1"><a href="/html/Main.html#needItem" class="">Необхідні комплектуючі
-                            </li>
+                            <li class="header__li1"><a href="/html/Main.html#needItem" class="">Необхідні комплектуючі</li>
                             <li class="header__li1"><a href="/html/Main.html#photoReport" class="">Фотозвіт</a></li>
                             <li class="header__li1"><a href="#footer" class="">Контакти</a></li>
                         </ol>
                     </div>
                 </div>
 
-                <h1 class="header__liFirst">DragonLab<br>DRONES</h1>
+                <img class="header__logo header__logo_off" src="/img/logo-title_Green.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="/html/Main.html" class="">Головна</a></li>
                     <li class="header__li"><a href="/html/Main.html#aboutUs" class="">Про нас</a></li>
@@ -48,9 +48,13 @@
                     <li class="header__li"><a href="/html/Main.html#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="/html/Main.html#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="#footer" class="">Контакти</a></li>
-                    <li class="header__li"><img src="/img/user accountGREEN.png" alt=""></li>
+                    <li class="header__li"><a class="last_a" href="/html/MyProfile.html"><span>Максим</span> <img src="/img/user accountGREEN.png" alt=""></a></li>
                 </ol>
             </nav>
+            <div class="header__navigation">
+                <a href="/html/Main.html">Головна /</a>
+                <p>Особистий кабінет </p>
+            </div>
         </header>
         <main class="main">
             <section class="main__section1">
@@ -65,10 +69,13 @@
                         <div class="section1__button">
                             <button type="text">Підтвердити замовлення</button>
                         </div>
+                        <div class="section1__nextButton">
+                            <button class="buttonStep">Крок <span id="stepCounter">2</span><img src="/img/стрілка чорна.png" alt=""></button>
+                        </div>
                     </div>
                     <div class="section1__wrapper2">
                         <div class="wrapper2__block_photo">
-                            <img src="/img/fotoinstruction1.png" alt="">
+                            <img id="wrapper2__change_photo" src="/img/fotoinstruction1.png" alt="">
                         </div>
                         <div class="section1__swipee_block">
                             <div class="wrapper2__counter_block">
@@ -166,12 +173,10 @@
                                                 458 4220.</p>
                                         </div>
                                     </div>
-                                    <div class="swiper-pagination"></div>
+                                        <div class="pagination"></div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="wrapper2__block_photo">
-                            <img src="/img/fotoinstruction1.png" alt="">
                         </div>
                     </div>
                     <div class="section1__button">
@@ -182,7 +187,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <p class="header__liFirst">DragonLab<br>DRONES</p>
+                <img class="header__logo " src="/img/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>
@@ -209,10 +214,30 @@
             freeMode: true,
             slidesPerView: 1,
             spaceBetween: 0,
-            loop: false,
+            loop: true,
             pagination: {
-                el: ".swiper-pagination",
+                el: ".pagination",
                 clickable: true,
+            },
+            breakpoints: {
+                0:{
+                    navigation: {
+                        nextEl: ".buttonStep",
+                    }
+                },
+                768:{
+                    navigation: {
+                        nextEl: ".custom-next",
+                        prevEl: ".custom-prev",
+                    }
+                },
+                1200:{
+                    navigation: {
+                        nextEl: ".custom-next",
+                        prevEl: ".custom-prev",
+                        loop: true,
+                    }
+                }
             },
             navigation: {
                 nextEl: ".custom-next",

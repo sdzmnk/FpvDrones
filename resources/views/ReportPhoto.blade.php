@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/ReportPhoto.css">
     <title>ReportPhoto</title>
 </head>
@@ -25,27 +25,31 @@
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
-                            <li class="header__li1"><a href="/html/Main.html" class="">Головна</a></li>
-                            <li class="header__li1"><a href="/html/Main.html#aboutUs" class="">Про нас</a></li>
-                            <li class="header__li1"><a href="/html/Main.html#help" class="">Як допомогти</a></li>
-                            <li class="header__li1"><a href="/html/Main.html#needItem" class="">Необхідні комплектуючі</li>
-                            <li class="header__li1"><a href="/html/Main.html#photoReport" class="">Фотозвіт</a></li>
-                            <li class="header__li1"><a href="#footer" class="">Контакти</a></li>
+                            <li class="header__li1"><a href="{{ route('main') }}" class="">Головна</a></li>
+                            <li class="header__li1"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
+                            <li class="header__li1"><a href="{{ route('main') }}#help" class="">Як допомогти</a></li>
+                            <li class="header__li1"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
+                            <li class="header__li1"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
+                            <li class="header__li1"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
                         </ol>
                     </div>
                 </div>
 
                 <h1 class="header__liFirst">DragonLab<br>DRONES</h1>
                 <ol class='header__ol'>
-                    <li class="header__li"><a href="/html/Main.html" class="">Головна</a></li>
-                    <li class="header__li"><a href="/html/Main.html#aboutUs" class="">Про нас</a></li>
-                    <li class="header__li"><a href="/html/Main.html#help" class="">Як допомогти</a></li>
-                    <li class="header__li"><a href="/html/Main.html#needItem" class="">Необхідні комплектуючі</li>
-                    <li class="header__li"><a href="/html/Main.html#photoReport" class="">Фотозвіт</a></li>
-                    <li class="header__li"><a href="#footer" class="">Контакти</a></li>
+                    <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
+                    <li class="header__li"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
+                    <li class="header__li"><a href="{{ route('main') }}#help" class="">Як допомогти</a></li>
+                    <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
+                    <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
+                    <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
                     <li class="header__li"><img src="/img/user accountGREEN.png" alt=""></li>
                 </ol>
             </nav>
+            <div class="header__navigation">
+                <a href="">Головна /</a>
+                <a href="">Фотозвіт</a>
+            </div>
         </header>
         <main class="main">
             <section class="main__section1">
@@ -54,7 +58,7 @@
                         <p class="section1__block_title">Фотозвіт</p>
                         <div>
                             <img src="/img/стрілка чорна.png" alt="">
-                            <a href="/html/Main.html#photoReport" class="">Назад</a>
+                            <a href="{{ route('main') }}#photoReport" class="">Назад</a>
                         </div>
                     </div>
                     <div class="section1__block_photo">
@@ -67,8 +71,6 @@
                             <img class="section1__photo6" src="/img/photoReport6.png" alt="">
                             <img class="section1__photo7" src="/img/photoReport7.png" alt="">
                         </div>
-
-
                     </div>
                 </div>
             </section>
@@ -86,18 +88,18 @@
                         <li>Відділення НП</li>
                     </ol>
                     <ol class="footer__list2">
-                        <li><a href="/html/Main.html" class="">Головна</a></li>
-                        <li><a href="/html/Main.html#aboutUs" class="">Про нас</a></li>
-                        <li><a href="/html/Main.html#help" class="">Як допомогти</a></li>
-                        <li><a href="/html/Main.html#needItem" class="">Необхідні комплектуючі</li>
-                        <li><a href="/html/Main.html#photoReport" class="">Фотозвіт</a></li>
-                        <li><a href="#footer" class="">Контакти</a></li>
+                        <li><a href="{{ route('main') }}" class="">Головна</a></li>
+                        <li><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
+                        <li><a href="{{ route('main') }}#help" class="">Як допомогти</a></li>
+                        <li><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
+                        <li><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
+                        <li><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
 
                     </ol>
                 </div>
             </div>
         </footer>
     </div>
-    <script src="/js/script.js"></script>
+    <script src="/js/Instuction.js"></script>
 </body>
 </html>

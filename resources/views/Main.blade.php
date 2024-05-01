@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/Main.css">
 
-    <title>Main</title>
+    <title>Головна</title>
 </head>
 
 <body>
@@ -24,8 +24,8 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <h1 class="header__liFirst1">DragonLab<br>DRONES</h1>
-                        <a class="burger__profile" href=""><img src="/img/user accountIcons.png" alt=""></a>
+                        <img class="header__logo " src="/img/logo-title.png"/>
+                        <a class="burger__profile" href="/html/MyProfile.html"><img src="/img/user accountIcons.png" alt=""></a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <h1 class="header__liFirst">DragonLab<br>DRONES</h1>
+                <img class="header__logo header__logo_off" src="/img/logo-title.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="" class="">Головна</a></li>
                     <li class="header__li"><a href="#aboutUs" class="">Про нас</a></li>
@@ -47,7 +47,13 @@
                     <li class="header__li"><a href="#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="#footer" class="">Контакти</a></li>
-                    <li class="header__li"><a href="/html/MyProfile.html"><img src="/img/user accountIcons.png" alt=""></a></li>
+                    <li class="header__li">
+                        @auth
+                            <a href="{{ route('dashboard') }}"><img src="/img/user accountIcons.png" alt=""></a>
+                        @else
+                            <a href="{{ route('register') }}"><img src="/img/user accountIcons.png" alt=""></a>
+                        @endauth
+                    </li>
                 </ol>
             </nav>
             <section class="header__section">
@@ -97,13 +103,13 @@
                                         дрони.</p>
                                     <div class="section2__block_photo">
                                         <div>
-                                            <img src="/img/section2_photo1.png" alt="">
+                                            <img src="/img/smile-1.png" alt="">
                                         </div>
                                         <div>
-                                            <img src="/img/section2_photo2.png" alt="">
+                                            <img src="/img/smile-2.png" alt="">
                                         </div>
                                         <div>
-                                            <img src="/img/section2_photo3.png" alt="">
+                                            <img src="/img/smile-3.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -129,13 +135,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div  class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <div class="slider1__click">
-                        <img class="button-next" src="/img/трілка сіра.png" alt="">
-                        <img class="button-prev" src="/img/стрілка чорна.png" alt="">
-                    </div>
+                </div>
+                <div class="slider1__click">
+                    <img class="button-next" src="/img/трілка сіра.png" alt="">
+                    <div  class="pagination"></div>
+                    <img class="button-prev" src="/img/стрілка чорна.png" alt="">
                 </div>
             </section>
             <div class="gradient">
@@ -215,7 +221,7 @@
                             <button class="baby__button">Baby Dragon</button>
                         </div>
                         <div class="section4__block3">
-                            <div class="swiper mySwiper">
+                            <div style="display: block;" class="swiper mySwiper swiper__active-1">
                                 <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="slide1 section4__block3_content">
@@ -260,8 +266,8 @@
                                                 <img class="clickCircle" src="/img/sircleEmptyXl.png" alt="" data-status="empty">
                                             </div>
                                             <div class='block3__slide_subtext3'>
-                                                <p>Запчастина: Apex/Apex HD</p>
-                                                <p>Модель: 7 inch</p>
+                                                <p>Запчастина: Apex/Apex HD<br>Модель: 7 inch</p>
+
                                             </div>
                                         </div>
                                     </div>
@@ -345,6 +351,136 @@
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
+                            <div style="display: none;"  class="swiper mySwiper swiper__active-2">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slide1 section4__block3_content">
+                                        <div class="section4__block3__slide">
+                                            <div class="block3__slide-img">
+                                                <img src="/img/Slide 5.png" alt="" class="">
+                                            </div>
+                                            <!-- <img src="/img/Slide1.png" alt="" class=""> -->
+                                            <div class='block3__slide_subtext'>
+                                                <p>Необхідно: 10</p>
+                                                <p>Зібрано: 0</p>
+                                            </div>
+                                            <div class='block3__slide_subtext2'>
+                                                <div>
+                                                    <p class='block3__name_slide'>Контроллер </p>
+                                                    <p class='block3__price_slide'>1330-2240грн</p>
+                                                </div>
+                                                <img class="clickCircle" src="/img/sircleEmptyXl.png" alt="" data-status="empty">
+                                            </div>
+                                            <div class='block3__slide_subtext3'>
+                                                <p>Запчастина: SpeedyBee F405</p>
+                                                <p>V3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide2 section4__block3_content">
+                                        <div class="section4__block3__slide">
+                                            <div class="block3__slide-img">
+                                                <img src="/img/Slide 6.png" alt="" class="">
+                                            </div>
+                                            <div class='block3__slide_subtext'>
+                                                <p>Необхідно: 10</p>
+                                                <p>Зібрано: 0</p>
+                                            </div>
+                                            <div class='block3__slide_subtext2'>
+                                                <div>
+                                                    <p class='block3__name_slide'>Рама</p>
+                                                    <p class='block3__price_slide'>720-1070грн</p>
+                                                </div>
+                                                <img class="clickCircle" src="/img/sircleEmptyXl.png" alt="" data-status="empty">
+                                            </div>
+                                            <div class='block3__slide_subtext3'>
+                                                <p>Запчастина: Apex/Apex HD</p>
+                                                <p>Модель: 7 inch</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide3 section4__block3_content">
+                                        <div class="section4__block3__slide">
+                                            <div class="block3__slide-img">
+                                                <img src="/img/Slide 7.png" alt="" class="">
+                                            </div>
+                                            <div class='block3__slide_subtext'>
+                                                <p>Необхідно: 10</p>
+                                                <p>Зібрано: 0</p>
+                                            </div>
+                                            <div class='block3__slide_subtext2'>
+                                                <div>
+                                                    <p class='block3__name_slide'>Мотори, 4 шт</p>
+                                                    <p class='block3__price_slide'>2695-2790грн</p>
+                                                </div>
+                                                <img class="clickCircle" src="/img/sircleEmptyXl.png" alt="" data-status="empty">
+                                            </div>
+                                            <div class='block3__slide_subtext3'>
+                                                <p>Запчастина: Brotherhobby</p>
+                                                <p>3008</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide4 section4__block3_content">
+                                        <div class="section4__block3__slide">
+                                            <div class="block3__slide-img">
+                                                <img src="/img/Slide4.png" alt="" class="">
+                                            </div>
+                                            <div class='block3__slide_subtext'>
+                                                <p>Необхідно: 10</p>
+                                                <p>Зібрано: 0</p>
+                                            </div>
+                                            <div class='block3__slide_subtext2'>
+                                                <div>
+                                                    <p class='block3__name_slide'>Радіоприймач(1)</p>
+                                                    <p class='block3__price_slide'>885-1165грн</p>
+                                                </div>
+                                                <img class="clickCircle" src="/img/sircleEmptyXl.png" alt="" data-status="empty">
+                                            </div>
+                                            <div class='block3__slide_subtext3'>
+                                                <p>Запчастина: TBS Crossfire</p>
+                                                <p>Nano RX</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide4 section4__block3_content">
+                                        <div class="section4__block3__slide">
+                                            <div class="block3__slide-img">
+                                                <img src="/img/Slide4.png" alt="" class="">
+                                            </div>
+                                            <div class='block3__slide_subtext'>
+                                                <p>Необхідно: 10</p>
+                                                <p>Зібрано: 0</p>
+                                            </div>
+                                            <div class='block3__slide_subtext2'>
+                                                <div>
+                                                    <p class='block3__name_slide'>Радіоприймач(1)</p>
+                                                    <p class='block3__price_slide'>885-1165грн</p>
+                                                </div>
+                                                <img class="clickCircle" src="/img/sircleEmptyXl.png" alt="" data-status="empty">
+                                            </div>
+                                            <div class='block3__slide_subtext3'>
+                                                <p>Запчастина: TBS Crossfire</p>
+                                                <p>Nano RX</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                         <div class="section4__slide_button">
                             <img class="prevButton section4__photo" src="/img/трілка сіра.png" alt="" class="">
@@ -352,13 +488,13 @@
                         </div>
                         <div class="section4__subSlideInfo">
                             <div>
-                                <a href="">Хочу придбати</a>
+                                <a href="/html/Instruction.html">Хочу придбати</a>
                             </div>
                             <p>При перевищенні цінності Вашого замовлення понад 150 EUR,<br>
                                 буде нараховано мито в розмірі 10% і ПДВ в розмірі 20% від вартості посилки.
                             </p>
                             <div>
-                                <a href="">Хочу придбати</a>
+                                <a href="/html/Instruction.html">Хочу придбати</a>
                             </div>
                         </div>
                     </div>
@@ -381,8 +517,7 @@
 
                         </div>
                         <div class="section5__look-more1">
-                            <a href="/html/ReportPhoto.html" class="">Дивитися більше</a>
-                            <img src="/img/стрілка чорна.png" alt="">
+                            <a href="/html/ReportPhoto.html" class=""><span>Дивитися більше</span><img src="/img/стрілка чорна.png" alt=""></a>
                         </div>
                     </div>
                 </section>
@@ -390,7 +525,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <p class="header__liFirst">DragonLab<br>DRONES</p>
+                <img class="header__logo " src="/img/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>
@@ -419,15 +554,14 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
-          spaceBetween: 25,
           loop: true,
         //   pagination: {
         //     el: ".swiper-pagination",
         //     clickable: true,
         //   },
           navigation: {
-            nextEl: ".prevButton",
-            prevEl: ".nextButton",
+            nextEl: ".nextButton",
+            prevEl: ".prevButton",
           },
             breakpoints: {
             0:{
@@ -440,19 +574,20 @@
                 slidesPerView: 3
             },
             700:{
-                slidesPerView: 4
-            },
-            1000:{
-                slidesPerView: 4
+                slidesPerView: 4,
+                spaceBetween: 15,
             },
             1200:{
-                slidesPerView: 3
+                slidesPerView: 4,
+                spaceBetween: 20,
             },
             1682: {
-            slidesPerView: 4
+                slidesPerView: 4,
+                spaceBetween: 30
             },
             3500: {
-                slidesPerView: 4
+                slidesPerView: 4,
+
             }
         }
     },
@@ -460,11 +595,12 @@
     </script>
     <script>
         var swiper = new Swiper(".mySwiper1", {
+
           slidesPerView: 2,
           spaceBetween: 30,
           loop: true,
           pagination: {
-            el: ".swiper-pagination",
+            el: ".pagination",
             clickable: true,
           },
           navigation: {
@@ -485,7 +621,7 @@
                 slidesPerView: 2
             },
             1000:{
-                slidesPerView: 2
+                slidesPerView: 2,
             },
         }
         });
