@@ -17,6 +17,7 @@ class Content extends Model
     protected $fillable = [
         'html',
         'description',
+        'text',
     ];
 
 

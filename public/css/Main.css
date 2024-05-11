@@ -1104,6 +1104,7 @@ body {
     height: 30px;
   }
   .container .header .nav .burger__container .burger__block2 {
+    width: auto;
     display: none;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -1417,7 +1418,7 @@ body {
     height: 90px;
   }
   .container .footer div .footer_wrapper .footer__list1, .container .footer div .footer_wrapper .footer__list2 {
-    height: 100%;
+    height: min-content;
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
     font: 300 8px "Manrope";
@@ -1493,7 +1494,7 @@ body {
   }
   .container .header .nav .burger__container .burger__block2 {
     display: none;
-    width: 100%;
+    width: auto;
     position: absolute;
     top: 50%;
     left: 50%;

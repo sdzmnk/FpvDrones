@@ -20,5 +20,6 @@ class InstructionStep extends Model implements HasMedia
         'description',
         'detail_id',
         'link',
+        'img',
     ];
 }

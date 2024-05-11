@@ -1,10 +1,20 @@
+<?php
+use App\Models\Content;
+$content = Content::find(1);
+$text = $content->text;
+$new_text = str_replace("<p>", "<p class='section2__text'>", $text);
+$test_text=Content::find(2)->text;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/Main.css">
 
@@ -25,7 +35,13 @@
                             </div>
                         </div>
                         <img class="header__logo " src="/img/logo-title.png"/>
-                        <a class="burger__profile" href="/html/MyProfile.html"><img src="/img/user accountIcons.png" alt=""></a>
+                        <a class="burger__profile">
+                            @auth
+                                <a href="{{ route('dashboard') }}"><img src="/img/user accountIcons.png" alt=""></a>
+                            @else
+                                <a href="{{ route('register') }}"><img src="/img/user accountIcons.png" alt=""></a>
+                            @endauth
+                        <img src="/img/user accountIcons.png" alt=""></a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
@@ -56,7 +72,7 @@
                     </li>
                 </ol>
             </nav>
-            <section class="header__section">
+            <section class="header__section" id="">
                 <div class="">
                     <div>
                         <h1 class="">Українська Фабрика Дронів</h1>
@@ -69,10 +85,9 @@
             </section>
         </header>
         <main class="main">
-            <section class="main__section1">
+            <section class="main__section1" id="overAboutUs" >
                 <div class="section1__container">
-                    <div class="section1_oneText">100+</div>
-                    <div class="section1_twoText">FPV дрони виготовили</div>
+                    <?php echo $test_text; ?>
                 </div>
                 <div class="section1__container">
                     <div class="section1_oneText">20+</div>
@@ -91,16 +106,8 @@
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <div class="section2__container_text">
-                                    <p class="section2__text">Ми команда волонтерів, виробляємо FPV-дронди для українських
-                                        військових. </p>
-                                    <p class="section2__text">Частину зібраних коштів використовуємо для закупівлі
-                                        коплектуючих до дронів, закриваємо також інші цільові потреби підрозділів
-                                        передаючи мавіки, та ін.</p>
-                                    <p class="section2__text">Наша мета - максимізувати користь кожного донату: саме тому ми
-                                        збираємо та тестуємо дрони власноруч, закуповуємо комплектуючі без витрат на
-                                        розмитнення завдяки людям, що замовляють деталі самостійно. </p>
-                                    <p class="section2__text">Ми активно проводимо майстеркласи та навчаємо людей збирати
-                                        дрони.</p>
+                                    <?php echo $new_text; ?>
+
                                     <div class="section2__block_photo">
                                         <div>
                                             <img src="/img/smile-1.png" alt="">

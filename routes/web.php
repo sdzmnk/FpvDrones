@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DetailController;
 use App\Http\Controllers\Admin\LinkToDetailController;
 use App\Http\Controllers\MainPageController;
@@ -37,6 +38,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
 
     Route::resource('detail', DetailController::class);
     Route::resource('link_to_detail', LinkToDetailController::class);
+    Route::resource('content', ContentController::class);
 });
 
 require __DIR__.'/auth.php';

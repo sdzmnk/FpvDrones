@@ -26,7 +26,7 @@ class Detail extends Model implements HasMedia
         'need',
         'collected',
         'link_to_detail_id',
-
+        'img',
 
     ];
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->foreignId('detail_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
+            $table->string('img');
             $table->timestamps();
         });
     }

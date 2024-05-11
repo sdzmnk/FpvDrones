@@ -20,24 +20,24 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <h1 class="header__liFirst1">DragonLab<br>DRONES</h1>
+                        <img class="header__logo " src="/img/logo-title_Green.png"/>
                         <a class="burger__profile" href="{{ route('dashboard') }}">
-                            <img src="/img/userAccountBgGreen.png"alt=""></a>
+                            <img src="/img/userAccountBgGreen.png"alt="">
+                        </a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
                             <li class="header__li1"><a href="{{ route('main') }}" class="">Головна</a></li>
                             <li class="header__li1"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
                             <li class="header__li1"><a href="{{ route('main') }}#help" class="">Як допомогти</a></li>
-                            <li class="header__li1"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі
-                            </li>
+                            <li class="header__li1"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                             <li class="header__li1"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                             <li class="header__li1"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
                         </ol>
                     </div>
                 </div>
 
-                <h1 class="header__liFirst">DragonLab<br>DRONES</h1>
+                <img class="header__logo header__logo_off" src="/img/logo-title_Green.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
@@ -45,12 +45,12 @@
                     <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
-                    <li class="header__li"><a  href="{{ route('dashboard') }}"><span>{{ auth()->user()->name }}</span></span> <img src="/img/user accountGREEN.png" alt=""></a></li>
+                    <li class="header__li"><a class="last_a" href="{{ route('dashboard') }}"><span>{{ auth()->user()->name }}</span> <img src="/img/user accountGREEN.png" alt=""></a></li>
                 </ol>
             </nav>
             <div class="header__navigation">
                 <a href="{{ route('main') }}">Головна /</a>
-                <p href="{{ route('dashboard') }}">Особистий кабінет</p>
+                <p>Особистий кабінет </p>
             </div>
         </header>
         <main class="main">
@@ -72,7 +72,6 @@
                                 </a>
                             </form>
                         </div>
-
                     </div>
                     <div class="section1__block2">
                         <div class="section1__historyOrder_block">
@@ -164,7 +163,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <p class="header__liFirst">DragonLab<br>DRONES</p>
+                <img class="header__logo " src="/img/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>
@@ -188,4 +187,3 @@
     <script src="/js/Instuction.js"></script>
 </body>
 </html>
-

@@ -21,7 +21,8 @@ return new class extends Migration
             $table->decimal('max_price', 8, 2);
             $table->integer('need');
             $table->integer('collected');
-            $table->foreignId('link_to_detail_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
+            $table->foreignId('link_to_detail_id')->nullable()->constrained()->restrictOnDelete()->restrictOnUpdate();
+            $table->string('img');
             $table->timestamps();
         });
     }

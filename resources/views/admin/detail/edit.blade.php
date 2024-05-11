@@ -82,6 +82,13 @@
                                         @endforeach
                                     </select>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="feature_image">Зображення деталі</label>
+                                    <img src="{{ $detail['img']  }}" alt="" class="img-uploaded" style="display: block ">
+                                    <input type="text" name="img" class="form-control" id="feature_image" name="feature_image" value="" readonly>
+                                    <a href="" class="popup_selector" data-inputid="feature_image">Обрати</a>
+                                </div>
                             </div>
                             <!-- /.card-body -->
 

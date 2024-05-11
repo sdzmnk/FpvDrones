@@ -20,5 +20,6 @@ class PhotoToGallery extends Model implements HasMedia
     protected $fillable = [
         'gallery_id',
         'description',
+        'img',
     ];
 }

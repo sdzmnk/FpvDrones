@@ -19,6 +19,7 @@ class Drone extends Model implements HasMedia
         'name',
         'description',
         'detail_id',
+        'img',
 
     ];
 }

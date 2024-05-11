@@ -1,48 +1,3 @@
-{{--
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form> --}}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/SingIn.css">
-    <title>SignIn</title>
+    <title>Вхід</title>
 </head>
 <body>
     <div class="container">
@@ -65,24 +20,24 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <h1 class="header__liFirst1">DragonLab<br>DRONES</h1>
+                        <img class="header__logo " src="/img/logo-title_Green.png"/>
                         <a class="burger__profile" href="/html/MyProfile.html">
-                            <img src="/img/userAccountBgGreen.png"alt=""></a>
+                            <img src="/img/userAccountBgGreen.png"alt="">
+                        </a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
                             <li class="header__li1"><a href="{{ route('main') }}" class="">Головна</a></li>
                             <li class="header__li1"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
                             <li class="header__li1"><a href="{{ route('main') }}#help" class="">Як допомогти</a></li>
-                            <li class="header__li1"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі
-                            </li>
+                            <li class="header__li1"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                             <li class="header__li1"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
-                            <li class="header__li1"><a href="#footer" class="">Контакти</a></li>
+                            <li class="header__li1"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
                         </ol>
                     </div>
                 </div>
 
-                <h1 class="header__liFirst">DragonLab<br>DRONES</h1>
+                <img class="header__logo header__logo_off" src="/img/logo-title_Green.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
@@ -90,7 +45,7 @@
                     <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
-                    <li class="header__li"><a href="/html/MyProfile.html"><img src="/img/userAccountBgGreen.png" alt=""></a></li>
+                    <li class="header__li"><a class="last_a" href="/html/MyProfile.html"><img src="/img/user accountGREEN.png" alt=""></a></li>
                 </ol>
             </nav>
         </header>
@@ -147,7 +102,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <p class="header__liFirst">DragonLab<br>DRONES</p>
+                <img class="header__logo " src="/img/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>
@@ -171,9 +126,6 @@
     <script src="/js/Instuction.js"></script>
 </body>
 </html>
-
-
-
 
 
 
