@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->string('country')->nullable();
             $table->string('password');
+            $table->boolean('not_active')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

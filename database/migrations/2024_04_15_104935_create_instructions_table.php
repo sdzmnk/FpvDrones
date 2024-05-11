@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('description')->nullable();
             $table->foreignId('instruction_step_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
+            $table->boolean('not_active')->default(false);
             $table->timestamps();
         });
     }

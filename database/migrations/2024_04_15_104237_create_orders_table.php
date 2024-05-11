@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
             $table->date('date');
+            $table->boolean('not_active')->default(false);
             $table->timestamps();
         });
     }

@@ -1,11 +1,4 @@
-<?php
-use App\Models\Content;
-$content = Content::find(1);
-$text = $content->text;
-$new_text = str_replace("<p>", "<p class='section2__text'>", $text);
-$test_text=Content::find(2)->text;
 
-?>
 
 
 <!DOCTYPE html>
@@ -87,7 +80,7 @@ $test_text=Content::find(2)->text;
         <main class="main">
             <section class="main__section1" id="overAboutUs" >
                 <div class="section1__container">
-                    <?php echo $test_text; ?>
+
                 </div>
                 <div class="section1__container">
                     <div class="section1_oneText">20+</div>
@@ -106,7 +99,7 @@ $test_text=Content::find(2)->text;
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <div class="section2__container_text">
-                                    <?php echo $new_text; ?>
+
 
                                     <div class="section2__block_photo">
                                         <div>

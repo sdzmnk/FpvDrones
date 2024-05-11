@@ -26,7 +26,7 @@ class DetailController extends Controller
     public function create()
     {
         $details = Detail::orderBy('created_at', 'DESC')->get();
-        $linksToDetail = LinkToDetail::orderBy('created_at', 'desc')->get();
+        $linksToDetail = LinkToDetail::where('not_active', false)->orderBy('created_at', 'desc')->get();
         return view('admin.detail.create', [
             'linksToDetail' => $linksToDetail,
             'details' => $details,
@@ -57,7 +57,7 @@ class DetailController extends Controller
      */
     public function edit(Detail $detail)
     {
-        $linksToDetail = LinkToDetail::orderBy('created_at', 'desc')->get();
+        $linksToDetail = LinkToDetail::where('not_active', false)->orderBy('created_at', 'desc')->get();
 
         return view('admin.detail.edit', [
             'linksToDetail' => $linksToDetail,

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('link');
             $table->text('description')->nullable();
+            $table->boolean('not_active')->default(false);
             $table->timestamps();
         });
     }

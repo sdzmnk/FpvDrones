@@ -16,6 +16,7 @@ return new class extends Migration
             $table->enum('section', ['mainPage', 'aboutUs', 'details', 'photoReport']);
             $table->string('name');
             $table->text('description')->nullable();
+            $table->boolean('not_active')->default(false);
             $table->timestamps();
         });
     }

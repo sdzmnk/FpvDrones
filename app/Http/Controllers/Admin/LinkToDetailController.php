@@ -13,7 +13,7 @@ class LinkToDetailController extends Controller
      */
     public function index()
     {
-        $linksToDetail = LinkToDetail::orderBy('created_at', 'desc')->get();
+        $linksToDetail = LinkToDetail::where('not_active', false)->orderBy('created_at', 'desc')->get();
         return view('admin.link_to_detail.index',[
             'linksToDetail'=>$linksToDetail
         ]);
@@ -72,7 +72,8 @@ class LinkToDetailController extends Controller
      */
     public function destroy(LinkToDetail $linkToDetail)
     {
-        $linkToDetail->delete();
+        $linkToDetail->not_active=true;
+        $linkToDetail->save();
         return redirect()->back()->withSuccess('Посилання було успішно видалено!');
     }
 }
