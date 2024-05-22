@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title', 'Редагування посилання')
+@section('title', 'Редагування деталі')
 
 @section('content')
     <!-- Content Header (Page header) -->
@@ -73,23 +73,32 @@
                                     <input type="number" name="collected" value="{{ $detail['collected'] }}" class="form-control" id="collected"
                                         placeholder="Введіть к-сть" required>
                                 </div>
-                                <!-- select -->
+
                                 <div class="form-group">
-                                    <label>Оберіть посилання</label>
-                                    <select name="link_to_detail_id" value="{{ $detail['link_to_detail_id'] }}" class="form-control" required>
-                                        @foreach ($linksToDetail as $linkToDetail)
-                                            <option value="{{ $linkToDetail['id'] }}">{{ $linkToDetail['description'] }}</option>
-                                        @endforeach
-                                    </select>
+                                    <!-- select -->
+                                    <div class="form-group">
+                                        <label>Оберіть дрон</label>
+                                        <select name="drone_id" class="form-control" >
+                                            @foreach ($drones as $drone)
+                                                <option value="{{ $drone['id'] }}" @if ($drone['id'] == $detail['drone_id']) selected
+                                            @endif>{{ $drone['id'] }} - {{ $drone['name'] }}
+                                            </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
+
 
                                 <div class="form-group">
                                     <label for="feature_image">Зображення деталі</label>
-                                    <img src="{{ $detail['img']  }}" alt="" class="img-uploaded" style="display: block ">
-                                    <input type="text" name="img" class="form-control" id="feature_image" name="feature_image" value="" readonly>
+                                    <img src="/{{ $detail['img'] }}" alt="" class="img-uploaded" style="display: block ">
+                                    <input type="text" value="{{ $detail['img'] }}" name="img" class="form-control"
+                                        id="feature_image" name="feature_image" value="" readonly>
                                     <a href="" class="popup_selector" data-inputid="feature_image">Обрати</a>
                                 </div>
                             </div>
+
+
                             <!-- /.card-body -->
 
                             <div class="card-footer">

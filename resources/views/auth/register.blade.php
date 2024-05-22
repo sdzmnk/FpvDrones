@@ -20,9 +20,9 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <img class="header__logo " src="/img/logo-title_Green.png"/>
+                        <img class="header__logo " src="/storage/media/logo-title_Green.png"/>
                         <a class="burger__profile" {{--href="/html/MyProfile.html"--}}>
-                            <img src="/img/userAccountBgGreen.png"alt="">
+                            <img src="/storage/media/userAccountBgGreen.png"alt="">
                         </a>
                     </div>
                     <div class="burger__block2">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <img class="header__logo header__logo_off" src="/img/logo-title_Green.png"/>
+                <img class="header__logo header__logo_off" src="/storage/media/logo-title_Green.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
@@ -45,7 +45,7 @@
                     <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
-                    <li class="header__li"><a class="last_a" {{--href="/html/MyProfile.html"--}}><img src="/img/user accountGREEN.png" alt=""></a></li>
+                    <li class="header__li"><a class="last_a" {{--href="/html/MyProfile.html"--}}><img src="/storage/media/user accountGREEN.png" alt=""></a></li>
                 </ol>
             </nav>
         </header>
@@ -130,7 +130,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <img class="header__logo " src="/img/logo-title.png"/>
+                <img class="header__logo " src="/storage/media/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>
@@ -151,6 +151,6 @@
             </div>
         </footer>
     </div>
-    <script src="/js/Instuction.js"></script>
+    <script src="/js/Instruction.js"></script>
 </body>
 </html>

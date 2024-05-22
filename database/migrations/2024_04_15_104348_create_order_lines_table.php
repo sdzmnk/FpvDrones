@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('order_lines', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained()->restrictOnDelete()->restrictOnUpdate();;
-            $table->foreignId('detail_id')->constrained()->restrictOnDelete()->restrictOnUpdate();;
+            $table->foreignId('order_id')->nullable()->default(null)->constrained()->restrictOnDelete()->restrictOnUpdate();;
+            $table->foreignId('detail_id')->nullable()->default(null)->constrained()->restrictOnDelete()->restrictOnUpdate();;
             $table->integer('quantity_of_detail');
             $table->boolean('not_active')->default(false);
             $table->timestamps();

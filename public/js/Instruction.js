@@ -35,10 +35,6 @@ li1.forEach((item) => {
 
 
 
-
-
-
-
 const instructionCounter = document.querySelector(".wrapper2__counter1")
 let counterValue = parseInt(instructionCounter.textContent)
 const stepCounter = document.getElementById('stepCounter')
@@ -85,31 +81,33 @@ function Value(button){
 function switchMain(value){
     switch(value){
         case (1):{
-            photoInstruction1.src = "http://127.0.0.1:5500/img/fotoinstruction1.png"
+            photoInstruction1.src = "/storage/media/fotoinstruction1.png"
             break;
         }
         case (2):{
-            photoInstruction1.src = "http://127.0.0.1:5500/img/fotoinstruction2.png"
+            photoInstruction1.src = "/storage/media/fotoinstruction2.png"
             break;
         }
         case (3):{
-            photoInstruction1.src = "http://127.0.0.1:5500/img/fotoinstruction3.png"
+            photoInstruction1.src = "/storage/media/fotoinstruction3.png"
             break;
         }
         case (4):{
-            photoInstruction1.src = "http://127.0.0.1:5500/img/fotoinstruction4.png"
+            photoInstruction1.src = "/storage/media/fotoinstruction4.png"
             break;
         }
         case (5):{
-            photoInstruction1.src = "http://127.0.0.1:5500/img/fotoinstruction5.png"
+            photoInstruction1.src = "/storage/media/fotoinstruction5.png"
             break;
         }
         case (6):{
-            photoInstruction1.src = "http://127.0.0.1:5500/img/fotoinstruction6.png"
+            photoInstruction1.src = "/storage/media/fotoinstruction6.png"
             break;
         }
     }
 }
+
+
 instructionCustomPrev.addEventListener('click' , ()=> {
     Value(instructionCustomPrev)
 })

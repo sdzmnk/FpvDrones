@@ -11,13 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('drones', function (Blueprint $table) {
+        Schema::create('details', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('model');
+            $table->string('producer');
             $table->text('description')->nullable();
-            $table->foreignId('detail_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
-            $table->string('img');
+            $table->decimal('min_price', 8, 2);
+            $table->decimal('max_price', 8, 2);
+            $table->integer('need')->nullable();
+            $table->integer('collected')->nullable();
+            $table->foreignId('drone_id')->nullable()->default(null)->nullable()->constrained()->restrictOnDelete()->restrictOnUpdate();
             $table->boolean('not_active')->default(false);
+            $table->string('img')->nullable();;
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('drones');
+        Schema::dropIfExists('details');
     }
 };

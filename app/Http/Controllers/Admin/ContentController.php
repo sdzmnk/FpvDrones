@@ -24,7 +24,7 @@ class ContentController extends Controller
      */
     public function create()
     {
-
+        return view('admin.content.create');
     }
 
     /**
@@ -32,7 +32,10 @@ class ContentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        Content::create($data);
+        return redirect()->back()->withSuccess('Контент успішно додано!');
     }
 
     /**
@@ -69,7 +72,9 @@ class ContentController extends Controller
      */
     public function destroy(Content $content)
     {
-        //
+        $content->not_active=true;
+        $content->save();
+        return redirect()->back()->withSuccess('Контент було успішно видалено!');
     }
 
 }

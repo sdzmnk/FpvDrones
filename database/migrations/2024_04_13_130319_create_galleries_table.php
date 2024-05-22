@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->enum('section', ['mainPage', 'aboutUs', 'details', 'photoReport']);
             $table->string('name');
             $table->text('description')->nullable();
             $table->boolean('not_active')->default(false);

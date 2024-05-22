@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Detail;
+use App\Models\Drone;
 use App\Models\LinkToDetail;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class DetailController extends Controller
      */
     public function index()
     {
-        $details = Detail::orderBy('created_at', 'DESC')->get();
+        $details = Detail::where('not_active', false)->orderBy('created_at', 'DESC')->get();
         return view('admin.detail.index', [
             'details' => $details
         ]);
@@ -25,11 +26,9 @@ class DetailController extends Controller
      */
     public function create()
     {
-        $details = Detail::orderBy('created_at', 'DESC')->get();
-        $linksToDetail = LinkToDetail::where('not_active', false)->orderBy('created_at', 'desc')->get();
+        $drones = Drone::where('not_active', false)->orderBy('created_at', 'desc')->get();
         return view('admin.detail.create', [
-            'linksToDetail' => $linksToDetail,
-            'details' => $details,
+            'drones' => $drones,
         ]);;
     }
 
@@ -57,10 +56,10 @@ class DetailController extends Controller
      */
     public function edit(Detail $detail)
     {
-        $linksToDetail = LinkToDetail::where('not_active', false)->orderBy('created_at', 'desc')->get();
+        $drones = Drone::where('not_active', false)->orderBy('created_at', 'desc')->get();
 
         return view('admin.detail.edit', [
-            'linksToDetail' => $linksToDetail,
+            'drones' => $drones,
             'detail' => $detail,
         ]);
     }
@@ -81,7 +80,8 @@ class DetailController extends Controller
      */
     public function destroy(Detail $detail)
     {
-        $detail->delete();
+        $detail->not_active=true;
+        $detail->save();
         return redirect()->back()->withSuccess('Деталь було успішно видалено!');
     }
 }

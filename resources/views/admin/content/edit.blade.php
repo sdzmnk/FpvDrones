@@ -33,7 +33,7 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="html">html</label>
+                                    <label for="html">Розташування на строінці (html)</label>
                                     <input type="text" name="html" value = "{{ $content['html'] }}" class="form-control" id="html"
                                         placeholder="Введіть локацію html" required>
                                 </div>

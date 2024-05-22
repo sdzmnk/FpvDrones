@@ -20,9 +20,9 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <img class="header__logo " src="/img/logo-title_Green.png"/>
+                        <img class="header__logo " src="/storage/media/logo-title_Green.png"/>
                         <a class="burger__profile" href="{{ route('dashboard') }}">
-                            <img src="/img/userAccountBgGreen.png"alt="">
+                            <img src="/storage/media/userAccountBgGreen.png"alt="">
                         </a>
                     </div>
                     <div class="burger__block2">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <img class="header__logo header__logo_off" src="/img/logo-title_Green.png"/>
+                <img class="header__logo header__logo_off" src="/storage/media/logo-title_Green.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
@@ -45,7 +45,7 @@
                     <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
-                    <li class="header__li"><a class="last_a" href="{{ route('dashboard') }}"><span>{{ auth()->user()->name }}</span> <img src="/img/user accountGREEN.png" alt=""></a></li>
+                    <li class="header__li"><a class="last_a" href="{{ route('dashboard') }}"><span>{{ auth()->user()->name }}</span> <img src="/storage/media/user accountGREEN.png" alt=""></a></li>
                 </ol>
             </nav>
             <div class="header__navigation">
@@ -79,77 +79,23 @@
                         </div>
 
                         <div class="section1__block2__container">
-                            <div class="section1__block2_order">
-                                <ol class="section1__ol_1">
-                                    <li>09/02/2024</li>
-                                    <li>Контролер</li>
-                                    <li>Рама</li>
-                                    <li>Мотори</li>
-                                </ol>
-                                <ol class="section1__ol_2">
-                                    <li>.</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                </ol>
-                            </div>
-                            <div class="section1__block2_order">
-                                <ol class="section1__ol_1">
-                                    <li>09/02/2024</li>
-                                    <li>Контролер</li>
-                                    <li>Рама</li>
-                                    <li>Мотори</li>
-                                </ol>
-                                <ol class="section1__ol_2">
-                                    <li>.</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                </ol>
-                            </div>
-                            <div class="section1__block2_order">
-                                <ol class="section1__ol_1">
-                                    <li>09/02/2024</li>
-                                    <li>Контролер</li>
-                                    <li>Рама</li>
-                                    <li>Мотори</li>
-                                </ol>
-                                <ol class="section1__ol_2">
-                                    <li>.</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                </ol>
-                            </div>
-                            <div class="section1__block2_order">
-                                <ol class="section1__ol_1">
-                                    <li>09/02/2024</li>
-                                    <li>Контролер</li>
-                                    <li>Рама</li>
-                                    <li>Мотори</li>
-                                </ol>
-                                <ol class="section1__ol_2">
-                                    <li>.</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                </ol>
-                            </div>
-                            <div class="section1__block2_order">
-                                <ol class="section1__ol_1">
-                                    <li>09/02/2024</li>
-                                    <li>Контролер</li>
-                                    <li>Рама</li>
-                                    <li>Мотори</li>
-                                </ol>
-                                <ol class="section1__ol_2">
-                                    <li>.</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                    <li>1шт</li>
-                                </ol>
-                            </div>
-                    </div>
+                            @foreach ($orders as $order)
+                                <div class="section1__block2_order">
+                                    <ol class="section1__ol_1">
+                                        <li>{{ \Carbon\Carbon::parse($order->date)->format('d/m/Y') }}</li>
+                                        @foreach ($order->order_lines as $orderLine)
+                                            <li>{{ $orderLine->detail->description }}</li>
+                                        @endforeach
+                                    </ol>
+                                    <ol class="section1__ol_2">
+                                            <li>.</li>
+                                        @foreach ($order->order_lines as $orderLine)
+                                            <li>{{ $orderLine->quantity_of_detail }} шт</li>
+                                        @endforeach
+                                    </ol>
+                                </div>
+                            @endforeach
+                        </div>
                 </div>
                 <!-- <div class="section1__changeProfile_block">
                     <a href="" class="section1__changeProfile">Редагувати профіль</a>
@@ -163,7 +109,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <img class="header__logo " src="/img/logo-title.png"/>
+                <img class="header__logo " src="/storage/media/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>
@@ -184,6 +130,6 @@
             </div>
         </footer>
     </div>
-    <script src="/js/Instuction.js"></script>
+    <script src="/js/Instruction.js"></script>
 </body>
 </html>

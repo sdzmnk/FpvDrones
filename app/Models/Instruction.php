@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Instruction extends Model
 {
@@ -17,7 +18,11 @@ class Instruction extends Model
     protected $fillable = [
         'name',
         'description',
-        'instruction_step_id',
     ];
+
+    public function steps() : HasMany
+    {
+        return $this->hasMany(InstructionStep::class);
+    }
 
 }

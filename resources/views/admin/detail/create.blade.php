@@ -73,13 +73,17 @@
                                     placeholder="Введіть к-сть" required>
                             </div>
                             <!-- select -->
+
                             <div class="form-group">
-                                <label>Оберіть посилання</label>
-                                <select name="link_to_detail_id" class="form-control" required>
-                                    @foreach ($linksToDetail as $linkToDetail)
-                                        <option value="{{ $linkToDetail['id'] }}">{{ $linkToDetail['id']}} -  {{$linkToDetail['description'] }} </option>
-                                    @endforeach
-                                </select>
+                                <!-- select -->
+                                <div class="form-group">
+                                    <label>Оберіть дрон</label>
+                                    <select name="drone_id" class="form-control" >
+                                        @foreach ($drones as $drone)
+                                            <option value="{{ $drone['id'] }}">{{ $drone['id']}} -  {{$drone['name'] }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="form-group">

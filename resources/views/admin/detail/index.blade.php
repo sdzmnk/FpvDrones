@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title', 'Всі посилання')
+@section('title', 'Всі деталі')
 
 @section('content')
     <!-- Content Header (Page header) -->
@@ -40,7 +40,7 @@
               <th>Максимальна ціна</th>
               <th>Потрібна к-сть</th>
               <th>Зібрано</th>
-              <th>Посилання ID</th>
+              <th>Дрон ID</th>
               <th class="no-export">Дія</th>
             </tr>
             </thead>
@@ -56,7 +56,7 @@
                     <td>{{ $detail['max_price'] }}</td>
                     <td>{{ $detail['need'] }}</td>
                     <td>{{ $detail['collected'] }}</td>
-                    <td>{{ $detail['link_to_detail_id'] }}</td>
+                    <td>{{ $detail['drone_id'] }}</td>
 
                     <!-- Кнопки редактирования и удаления рядом с каждой записью -->
                     <td class="no-export">
@@ -87,7 +87,7 @@
                 <th>Максимальна ціна</th>
                 <th>Потрібна к-сть</th>
                 <th>Зібрано</th>
-                <th>Посилання ID</th>
+                <th>Дрон ID</th>
             </tr>
             </tfoot>
           </table>

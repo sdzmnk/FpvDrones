@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Detail;
 use App\Models\LinkToDetail;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,10 @@ class LinkToDetailController extends Controller
     public function index()
     {
         $linksToDetail = LinkToDetail::where('not_active', false)->orderBy('created_at', 'desc')->get();
+        $details = Detail::where('not_active', false)->orderBy('created_at', 'desc')->get();
         return view('admin.link_to_detail.index',[
-            'linksToDetail'=>$linksToDetail
+            'linksToDetail'=>$linksToDetail,
+            'details'=>$details,
         ]);
     }
 
@@ -24,7 +27,10 @@ class LinkToDetailController extends Controller
      */
     public function create()
     {
-        return view('admin.link_to_detail.create');
+        $details = Detail::where('not_active', false)->orderBy('created_at', 'desc')->get();
+        return view('admin.link_to_detail.create',[
+            'details'=>$details,
+        ]);
     }
 
     /**
@@ -51,8 +57,10 @@ class LinkToDetailController extends Controller
      */
     public function edit(LinkToDetail $linkToDetail)
     {
+        $details = Detail::where('not_active', false)->orderBy('created_at', 'desc')->get();
         return view('admin.link_to_detail.edit',[
-            'linkToDetail'=>$linkToDetail
+            'linkToDetail'=>$linkToDetail,
+            'details'=>$details,
         ]);
     }
 

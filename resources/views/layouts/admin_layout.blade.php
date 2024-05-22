@@ -92,36 +92,70 @@
             </li>
             <li class="nav-item">
                 <a href="{{ route('content.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fa-solid fa-font"></i>
                     <p>
                     Контент
                     </p>
                 </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('content.index') }}" class="nav-link">
+                          <p>Весь контент</p>
+                        </a>
+                      </li>
+                    <li class="nav-item">
+                      <a href="{{ route('content.create') }}" class="nav-link">
+                        <p>Додати контент</p>
+                      </a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fa-solid fa-gears"></i>
+                      <p>
+                        Деталі
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{ route('detail.index') }}" class="nav-link">
+                          <p>Всі деталі</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('detail.create') }}" class="nav-link">
+                          <p>Додати деталь</p>
+                        </a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <p>
+                            <i class="fa-solid fa-link"></i>
+                            Посилання на деталі
+                            <i class="right fas fa-angle-left"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="{{ route('link_to_detail.index') }}" class="nav-link">
+                              <p>Всі посилання</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="{{ route('link_to_detail.create') }}" class="nav-link">
+                              <p>Додати посилання</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
                 </li>
             <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Деталі
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('detail.index') }}" class="nav-link">
-                  <p>Всі деталі</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('detail.create') }}" class="nav-link">
-                  <p>Додати деталь</p>
-                </a>
-              </li>
-              </ul>
-            </li>
-            <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <i class="nav-icon fa-solid fa-jet-fighter-up"></i>
                   <p>
                     Дрони
                     <i class="right fas fa-angle-left"></i>
@@ -129,37 +163,172 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./index.html" class="nav-link">
+                    <a href="{{ route('drone.index') }}" class="nav-link">
                       <p>Всі дрони</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./index.html" class="nav-link">
+                    <a href="{{ route('drone.create') }}" class="nav-link">
                       <p>Додати дрон</p>
                     </a>
                   </li>
                   </ul>
             </li>
+
             <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <i class="nav-icon fa-regular fa-address-book"></i>
                   <p>
-                    Посилання на деталі
+                    Користувачі
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ route('link_to_detail.index') }}" class="nav-link">
-                      <p>Всі посилання</p>
+                    <a href="{{ route('user.index') }}" class="nav-link">
+                      <p>Всі користувачі</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('link_to_detail.create') }}" class="nav-link">
-                      <p>Додати посилання</p>
+                    <a href="{{ route('user.create') }}" class="nav-link">
+                      <p>Додати користувача</p>
                     </a>
                   </li>
                   </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa-solid fa-list-ol"></i>
+                  <p>
+                    Інструкція
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('instruction_admin.index') }}" class="nav-link">
+                      <p>Всі інструкції(загальні)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('instruction_admin.create') }}" class="nav-link">
+                      <p>Додати інструкцію(загальну)</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <p>
+                        <i class="fa-solid fa-stairs"></i>
+                        Кроки
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{ route('instruction_step.index') }}" class="nav-link">
+                          <p>Всі кроки</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('instruction_step.create') }}" class="nav-link">
+                          <p>Додати крок</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa-solid fa-box-archive"></i>
+                  <p>
+                    Замовлення
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('order.index') }}" class="nav-link">
+                      <p>Всі замовлення</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('order.create') }}" class="nav-link">
+                      <p>Додати замовлення</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <p>
+                        <i class="fa-solid fa-circle-info"></i>
+                        Деталі замовлень
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{ route('order_line.index') }}" class="nav-link">
+                          <p>Всі деталі замовлень</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('order_line.create') }}" class="nav-link">
+                          <p>Додати деталі замовлень</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa-solid fa-images"></i>
+                  <p>
+                    Галереї
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('gallery.index') }}" class="nav-link">
+                      <p>Всі галереї</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('gallery.create') }}" class="nav-link">
+                      <p>Додати галерею</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <p>
+                        <i class="fa-solid fa-image"></i>
+                        Фото
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{ route('photo_to_gallery.index') }}" class="nav-link">
+                          <p>Всі фото</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('photo_to_gallery.create') }}" class="nav-link">
+                          <p>Додати фото</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
             </li>
 
         </ul>
@@ -230,6 +399,7 @@
 <script src="/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="/admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="https://kit.fontawesome.com/bb78e0724e.js" crossorigin="anonymous"></script>
 <script>
   $(function () {
 
@@ -296,7 +466,8 @@
 
 
 <script type="text/javascript" src="/admin/dist/js/jquery.colorbox-min.js"></script>
-<script src="https://cdn.tiny.cloud/1/7o8ev18i1a2cnkwuho0r7ai9hhuxna8bp6nfsjs673wt9xna/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/w242r2oynhcnkhh5xx2hihtqne4r7f44178dk05f3wtowhcp/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
 <script src="/admin/admin.js"></script>
 <script type="text/javascript" src="/packages/barryvdh/elfinder/js/standalonepopup.js"></script>
 </body>

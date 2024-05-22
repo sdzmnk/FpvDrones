@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/ReportPhoto.css">
-    <title>ReportPhoto</title>
+    <title>Фотозвіт</title>
 </head>
 <body>
     <div class="container">
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <h1 class="header__liFirst1">DragonLab<br>DRONES</h1>
-                        <a class="burger__profile" href="/html/MyProfile.html"><img src="/img/user accountGREEN.png" alt=""></a>
+                        <a class="burger__profile" href="{{ route('main') }}"><img src="/img/user accountGREEN.png" alt=""></a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
@@ -43,11 +43,17 @@
                     <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
-                    <li class="header__li"><img src="/img/user accountGREEN.png" alt=""></li>
+                    <li class="header__li">
+                        @auth
+                            <a href="{{ route('dashboard') }}"><img src="/img/user accountGREEN.png" alt=""></a>
+                        @else
+                            <a href="{{ route('register') }}"><img src="/img/user accountGREEN.png" alt=""></a>
+                        @endauth
+                    </li>
                 </ol>
             </nav>
             <div class="header__navigation">
-                <a href="">Головна /</a>
+                <a href="{{ route('main') }}">Головна /</a>
                 <a href="">Фотозвіт</a>
             </div>
         </header>
@@ -63,13 +69,11 @@
                     </div>
                     <div class="section1__block_photo">
                         <div class="section1__wrapper_photo">
-                            <img class="section1__photo1" src="/img/photoReport1.png" alt="">
-                            <img class="section1__photo2" src="/img/photoReport2.png" alt="">
-                            <img class="section1__photo3" src="/img/photoReport3.png" alt="">
-                            <img class="section1__photo4" src="/img/photoReport4.png" alt="">
-                            <img class="section1__photo5" src="/img/photoReport5.png" alt="">
-                            <img class="section1__photo6" src="/img/photoReport6.png" alt="">
-                            <img class="section1__photo7" src="/img/photoReport7.png" alt="">
+                            @foreach ($galleries as $gallery)
+                                @foreach ($gallery->photos_to_gallery as $index =>$photo)
+                                    <img class="section1__photo{{ $index + 1 }}"+ src="{{ $photo->img }}" alt="">
+                                @endforeach
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -100,6 +104,6 @@
             </div>
         </footer>
     </div>
-    <script src="/js/Instuction.js"></script>
+    <script src="/js/Instruction.js"></script>
 </body>
 </html>

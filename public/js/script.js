@@ -23,56 +23,90 @@ click.addEventListener('click',()=>{
 })
 
 
+// const clickCircle = document.querySelectorAll('.clickCircle');
+
+// clickCircle.forEach((item) => {
+//     item.addEventListener('click', () => {
+//         const currentStatus = item.getAttribute('data-status');
+//         if (currentStatus === "empty") {
+//             item.src = '/img/sircleXl.png';
+//             item.setAttribute('data-status', 'filled');
+//         } else {
+//             item.src = "/img/sircleEmptyXl.png";
+//             item.setAttribute('data-status', 'empty');
+//         }
+//     });
+// });
+
+
+//
+window.addEventListener('beforeunload', () => {
+    sessionStorage.clear();
+});
+
 const clickCircle = document.querySelectorAll('.clickCircle');
 
 clickCircle.forEach((item) => {
     item.addEventListener('click', () => {
         const currentStatus = item.getAttribute('data-status');
+        const detailId = item.closest('.swiper-slide').getAttribute('data-detail-id'); // Получаем ID детали
         if (currentStatus === "empty") {
             item.src = '/img/sircleXl.png';
             item.setAttribute('data-status', 'filled');
+            sessionStorage.setItem(detailId, 'selected');
         } else {
             item.src = "/img/sircleEmptyXl.png";
             item.setAttribute('data-status', 'empty');
+            sessionStorage.removeItem(detailId);
         }
+
+        const selectedDetails = Object.keys(sessionStorage).filter(key => sessionStorage.getItem(key) === 'selected');
+        fetch('/save-selected-details', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({ selectedDetails: selectedDetails })
+        });
     });
 });
 
 
+const droneButtons = document.querySelectorAll('.section4__block2 .drone__button');
+const droneSwipers = document.querySelectorAll('.section4__block3 .swiper');
 
+// Обработка клика на кнопки дронов
+droneButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const droneId = button.getAttribute('data-drone-id');
 
-const buttonBaby = document.querySelector('.baby__button');
-const buttonTeen = document.querySelector('.tenn__button');
-const swiper__active1 = document.querySelector('.swiper__active-1')
-const swiper__active2 = document.querySelector('.swiper__active-2')
-function toggleButton(activeButton, inactiveButton) {
-    activeButton.style.background = 'black';
-    activeButton.style.color = 'white';
-    inactiveButton.style.background = 'none';
-    inactiveButton.style.color = 'black';
+        // Переключение видимости слайдеров
+        droneSwipers.forEach(swiper => {
+            if (swiper.classList.contains(`swiper__active-${droneId}`)) {
+                swiper.style.display = 'block';
+            } else {
+                swiper.style.display = 'none';
+            }
+        });
 
+        // Обновление стилей кнопок
+        droneButtons.forEach(btn => {
+            if (btn === button) {
+                btn.style.background = 'black';
+                btn.style.color = 'white';
+            } else {
+                btn.style.background = 'none';
+                btn.style.color = 'black';
+            }
+        });
+    });
+});
 
+// Установка начального активного дрона
+if (droneButtons.length > 0) {
+    droneButtons[0].click();
 }
-
-buttonBaby.addEventListener('click', () => {
-    toggleButton(buttonBaby, buttonTeen);
-    if(swiper__active1.style.display == 'block'){
-        swiper__active1.style.display = 'none';
-        swiper__active2.style.display = 'block';
-    }
-
-});
-
-buttonTeen.addEventListener('click', () => {
-    toggleButton(buttonTeen, buttonBaby);
-    if(swiper__active1.style.display == 'none'){
-        swiper__active1.style.display = 'block';
-        swiper__active2.style.display = 'none';
-    }
-});
-
-// Встановлення початкових стилів
-toggleButton(buttonTeen, buttonBaby);
 
 ////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////

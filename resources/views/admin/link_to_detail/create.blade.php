@@ -32,7 +32,7 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="linkText">Опис</label>
+                                <label for="description">Опис</label>
                                 <input type="text" name="description" class="form-control" id="description"
                                     placeholder="Введіть опис" >
                             </div>
@@ -42,7 +42,17 @@
                                 <input type="text" name="link" class="form-control" id="link"
                                     placeholder="Введіть посилання" required>
                             </div>
+
+                            <div class="form-group">
+                                <label>Оберіть деталь</label>
+                                <select name="detail_id" class="form-control" >
+                                    @foreach ($details as $detail)
+                                        <option value = "{{ $detail['id']}}" >{{ $detail['id']}} -  {{$detail['name'] }} </option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
+
                         <!-- /.card-body -->
 
                         <div class="card-footer">

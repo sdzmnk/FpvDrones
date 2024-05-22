@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
+            $table->foreignId('user_id')->nullable()->default(null)->constrained()->default(null)->restrictOnDelete()->restrictOnUpdate();
             $table->date('date');
             $table->boolean('not_active')->default(false);
             $table->timestamps();

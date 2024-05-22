@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('photo_to_galleries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('gallery_id')->constrained()->restrictOnDelete()->restrictOnUpdate();
+            $table->foreignId('gallery_id')->nullable()->default(null)->constrained()->restrictOnDelete()->restrictOnUpdate();
             $table->text('description')->nullable();
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->boolean('not_active')->default(false);
             $table->timestamps();
         });

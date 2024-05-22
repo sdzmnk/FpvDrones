@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('link_to_details', function (Blueprint $table) {
+        Schema::create('instruction_steps', function (Blueprint $table) {
             $table->id();
-            $table->text('link');
+            $table->text('name')->nullable();
             $table->text('description')->nullable();
+            $table->string('img')->nullable();
+            $table->foreignId('instruction_id')->nullable()->default(null)->constrained()->restrictOnDelete()->restrictOnUpdate();
             $table->boolean('not_active')->default(false);
             $table->timestamps();
         });
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('link_to_details');
+        Schema::dropIfExists('instruction_steps');
     }
 };

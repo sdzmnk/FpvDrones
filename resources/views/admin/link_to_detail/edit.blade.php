@@ -42,6 +42,20 @@
                                     <input type="text" value="{{ $linkToDetail['link'] }}" name="link" class="form-control"
                                         id="link" placeholder="Введіть посилання" required>
                                 </div>
+
+                                <div class="form-group">
+                                    <!-- select -->
+                                    <div class="form-group">
+                                        <label>Оберіть деталь</label>
+                                        <select name="detail_id" class="form-control" >
+                                            @foreach ($details as $detail)
+                                                <option value="{{ $detail['id'] }}" @if ($detail['id'] == $linkToDetail['detail_id']) selected
+                                            @endif>{{ $detail['id'] }} - {{ $detail['name'] }}
+                                            </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.card-body -->
 
