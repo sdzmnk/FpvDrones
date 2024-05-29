@@ -83,6 +83,6 @@
             </div>
         </footer>
     </div>
-    <script src="/js/Instuction.js"></script>
+    <script src="/js/Instruction.js"></script>
 </body>
 </html>

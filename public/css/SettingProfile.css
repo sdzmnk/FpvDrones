@@ -144,10 +144,12 @@
   background: #1A5653;
   border-radius: 999px;
 }
-.container .main .main__section1 .section1__wrapper .section1__block2 .block2__wrapper2 .block2__changeInfo a {
+.container .main .main__section1 .section1__wrapper .section1__block2 .block2__wrapper2 .block2__changeInfo button {
   text-decoration: none;
   font: 600 24px "Manrope";
   color: #fff;
+  background: #1A5653;
+  border-radius: 999px;
 }
 .container .footer {
   padding: 3.12vw 6.16vw 4.25vw 4.16vw;

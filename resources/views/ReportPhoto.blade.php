@@ -20,8 +20,7 @@
                                 <div class="burger__3"></div>
                             </div>
                         </div>
-                        <h1 class="header__liFirst1">DragonLab<br>DRONES</h1>
-                        <a class="burger__profile" href="{{ route('main') }}"><img src="/img/user accountGREEN.png" alt=""></a>
+                        <a class="burger__profile" href="{{ route('main') }}"><img class="header__logo " src="/storage/media/logo-title_Green.png"/></a>
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
@@ -35,7 +34,7 @@
                     </div>
                 </div>
 
-                <h1 class="header__liFirst">DragonLab<br>DRONES</h1>
+                <img class="header__logo " src="/storage/media/logo-title_Green.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>
@@ -45,9 +44,9 @@
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
                     <li class="header__li">
                         @auth
-                            <a href="{{ route('dashboard') }}"><img src="/img/user accountGREEN.png" alt=""></a>
+                            <a href="{{ route('dashboard') }}"><img src="/storage/media/user accountGREEN.png" alt=""></a>
                         @else
-                            <a href="{{ route('register') }}"><img src="/img/user accountGREEN.png" alt=""></a>
+                            <a href="{{ route('register') }}"><img src="/storage/media/user accountGREEN.png" alt=""></a>
                         @endauth
                     </li>
                 </ol>
@@ -63,7 +62,7 @@
                     <div class="section1__block_info">
                         <p class="section1__block_title">Фотозвіт</p>
                         <div>
-                            <img src="/img/стрілка чорна.png" alt="">
+                            <img src="/storage/media/стрілка чорна.png" alt="">
                             <a href="{{ route('main') }}#photoReport" class="">Назад</a>
                         </div>
                     </div>
@@ -82,7 +81,7 @@
         </main>
         <footer id="footer" class="footer">
             <div>
-                <p class="header__liFirst">DragonLab<br>DRONES</p>
+                <img class="header__logo " src="/storage/media/logo-title.png"/>
                 <div class="footer_wrapper">
                     <ol class="footer__list1">
                         <li>Дані для переадресації посилки:</li>

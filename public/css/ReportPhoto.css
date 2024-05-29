@@ -38,10 +38,9 @@
 .container .header .nav .burger__container {
   display: none;
 }
-.container .header .nav .header__liFirst {
-  font: bold 28px "e-Ukraine";
-  color: #1A5653;
-  margin-right: 40px;
+.container .header .nav .header__logo {
+  width: 250px;
+  height: 100%;
 }
 .container .header .nav .header__ol {
   display: flex;
@@ -55,6 +54,10 @@
   text-decoration: none;
   font: 400 1.1vw "Manrope";
   color: #1A5653;
+}
+.container .header .nav .header__ol .header__li a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #1A5653;
 }
 .container .header .nav .header__ol .header__li:last-child {
   margin: 0;
@@ -145,9 +148,9 @@
   display: flex;
   justify-content: space-between;
 }
-.container .footer div .header__liFirst {
-  font: bold 28px "e-Ukraine";
-  color: #fff;
+.container .footer div .header__logo {
+  width: 250px;
+  height: 55px;
 }
 .container .footer div .footer_wrapper {
   display: flex;
@@ -175,6 +178,27 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1610px) {
+  .container .header {
+    margin-bottom: 70px;
+  }
+  .container .header .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .container .header .nav .header__logo {
+    width: 200px;
+    margin-right: 30px;
+  }
+  .container .footer {
+    padding: 3.12vw 3.16vw 3.25vw 3.16vw;
+  }
+  .container .footer div .header__logo {
+    width: 200px;
+    height: 44px;
+  }
+}
 @media screen and (max-width: 1280px) {
   .container .header {
     margin-bottom: 70px;
@@ -183,9 +207,9 @@
     display: flex;
     justify-content: space-between;
   }
-  .container .header .nav .header__liFirst {
-    font: bold 24px "e-Ukraine";
-    margin-right: 40px;
+  .container .header .nav .header__logo {
+    width: 120px;
+    margin-right: 30px;
   }
   .container .header .nav .header__ol {
     display: flex;
@@ -306,10 +330,9 @@
     display: flex;
     justify-content: space-between;
   }
-  .container .footer div .header__liFirst {
-    font: bold 20px "e-Ukraine";
-    color: #fff;
-    margin-right: 40px;
+  .container .footer div .header__logo {
+    width: 120px;
+    height: 27px;
   }
   .container .footer div .footer_wrapper {
     display: flex;
@@ -522,11 +545,11 @@
     justify-content: space-between;
     padding: 0;
   }
-  .container .header .nav .header__liFirst {
+  .container .header .nav .header__logo_off {
     display: none;
-    font: bold 16px "e-Ukraine";
-    color: #fff;
-    margin-right: 0;
+  }
+  .container .header .nav .header__logo {
+    margin: 0;
   }
   .container .header .nav .burger__container {
     display: block;
@@ -690,12 +713,9 @@
     display: flex;
     justify-content: space-between;
   }
-  .container .footer div .header__liFirst {
-    display: block;
-    text-align: center;
-    font: bold 18px "e-Ukraine";
-    color: #fff;
-    margin-bottom: 20px;
+  .container .footer div .header__logo {
+    width: 120px;
+    height: 27px;
   }
   .container .footer div .footer_wrapper {
     width: auto;
@@ -941,14 +961,11 @@
     border-top-right-radius: 10px;
   }
   .container .footer div {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .container .footer div .header__liFirst {
-    display: block;
-    text-align: center;
-    font: bold 18px "e-Ukraine";
-    color: #fff;
-    margin: 0;
+  .container .footer div .header__logo {
     margin-bottom: 20px;
   }
   .container .footer div .footer_wrapper {

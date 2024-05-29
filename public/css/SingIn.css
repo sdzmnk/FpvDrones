@@ -147,7 +147,9 @@
   padding: 15px 0;
   text-align: center;
 }
-.container .main .main__section1 .section1__wrapper .section1__enter a {
+.container .main .main__section1 .section1__wrapper .section1__enter button {
+    background: rgb(26, 86, 83);
+    border: 0;
   text-decoration: none;
   color: #fff;
   font: 600 24px "Manrope";

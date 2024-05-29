@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="block2__changeInfo">
-                    <button type="submit">Змінити</button>
+                    <button style="border:0" type="submit">Змінити</button>
                 </div>
                 {{-- @if (session('status') === 'profile-updated')
                         <p
