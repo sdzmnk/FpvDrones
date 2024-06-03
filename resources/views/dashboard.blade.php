@@ -111,13 +111,7 @@
             <div>
                 <img class="header__logo " src="/storage/media/logo-title.png"/>
                 <div class="footer_wrapper">
-                    <ol class="footer__list1">
-                        <li>Дані для переадресації посилки:</li>
-                        <li>Свистович Андрій</li>
-                        <li>098 458 4220</li>
-                        <li>м.Львів</li>
-                        <li>Відділення НП</li>
-                    </ol>
+                    <?php echo $footer->text?>
                     <ol class="footer__list2">
                         <li><a href="{{ route('main') }}" class="">Головна</a></li>
                         <li><a href="{{ route('main') }}#aboutUs" class="">Про нас</a></li>

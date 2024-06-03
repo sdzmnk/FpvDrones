@@ -370,6 +370,7 @@ swiperContainer.style.height = firstSlide.offsetHeight + 'px';
                                     </div>
                                 </div>
                             </div>
+
                             <div class="section1__button">
                                 <button form="myForm" type="submit">Підтвердити замовлення</button>
                             </div>
@@ -380,13 +381,7 @@ swiperContainer.style.height = firstSlide.offsetHeight + 'px';
                     <div>
                         <img class="header__logo " src="/storage/media/logo-title.png"/>
                         <div class="footer_wrapper">
-                            <ol class="footer__list1">
-                                <li>Дані для переадресації посилки:</li>
-                                <li>Свистович Андрій</li>
-                                <li>098 458 4220</li>
-                                <li>м.Львів</li>
-                                <li>Відділення НП</li>
-                            </ol>
+                            <?php echo $footer->text?>
                             <ol class="footer__list2">
                                 <li><a href="{{route('main')}}" class="">Головна</a></li>
                                 <li><a href="{{route('main')}}#aboutUs" class="">Про нас</a></li>
@@ -436,7 +431,38 @@ swiperContainer.style.height = firstSlide.offsetHeight + 'px';
                     },
                 });
             </script>
+
+            <script>
+                const instructionCounter = document.querySelector(".wrapper2__counter1");
+                const stepCounter = document.getElementById('stepCounter');
+                const instructionCustomPrev = document.querySelector(".custom-prev");
+                const instructionCustomNext = document.querySelector(".custom-next");
+                const photoInstruction = document.getElementById('wrapper2__change_photo');
+
+                let counterValue = 1;
+                let stepCounterValue = 1;
+                const totalSteps = {{ $instruction->steps->count() }};
+                const steps = @json($instruction->steps);
+
+                instructionCustomPrev.addEventListener('click', () => changeStep(-1));
+                instructionCustomNext.addEventListener('click', () => changeStep(1));
+
+                function changeStep(direction) {
+                    counterValue += direction;
+                    if (counterValue < 1) {
+                        counterValue = totalSteps;
+                    } else if (counterValue > totalSteps) {
+                        counterValue = 1;
+                    }
+                    stepCounterValue = counterValue;
+
+                    instructionCounter.textContent = counterValue;
+                    stepCounter.textContent = stepCounterValue;
+                    photoInstruction.src = steps[counterValue - 1].img;
+                }
+            </script>
             <script src="/js/Instruction.js">
+                const instructionSteps = @json($instruction->steps);
                 var swiperContainer = document.querySelector('.swiper');
 
                 var firstSlide = swiperContainer.querySelector('.swiper-slide');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Content;
 use App\Models\PhotoToGallery;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
@@ -17,7 +18,13 @@ class ReportPhotoController extends Controller
         ->where('not_active', false)
         ->where('name', 'photoReport')
         ->get();
-        return view('ReportPhoto', compact('galleries'));
+
+        $footer = Content::where('html', 'footer')
+                        ->latest()
+                        ->first();
+
+
+        return view('ReportPhoto', compact('galleries', 'footer'));
     }
 
     /**

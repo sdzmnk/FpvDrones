@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Content;
 use App\Models\Instruction;
 use App\Models\Detail;
 use App\Models\Order;
@@ -24,10 +25,16 @@ class InstructionController extends Controller
 
         $instruction =  Instruction::where('not_active', false)
                                     ->where('name', 'mainInstruction')
+                                    ->with('steps')
+                                    ->latest()
                                     ->first();
         $user = Auth::user();
 
-        return view('Instruction', compact('selectedDetails', 'instruction', 'user'));
+        $footer = Content::where('html', 'footer')
+                        ->latest()
+                        ->first();
+
+        return view('Instruction', compact('selectedDetails', 'instruction', 'user', 'footer'));
 
     }
 

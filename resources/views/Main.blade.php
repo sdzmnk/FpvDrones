@@ -124,7 +124,7 @@
                                                         <div class='block3__slide_subtext2'>
                                                             <div>
                                                                 <p class='block3__name_slide'>{{ $detail->description }}</p>
-                                                                <p class='block3__price_slide'>{{ $detail->min_price }} - {{ $detail->max_price }}</p>
+                                                                <p class='block3__price_slide'>{{ number_format($detail->min_price, 0, '.', '') }} - {{ number_format($detail->max_price, 0, '.', '') }}</p>
                                                             </div>
                                                             <img class="clickCircle" src="/storage/media/sircleEmptyXl.png" alt="" data-status="empty">
                                                         </div>

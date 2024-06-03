@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Content;
 use App\Models\Order;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -18,16 +19,25 @@ class ProfileController extends Controller
 
     public function dashboard(Request $request): View
     {
+        $footer = Content::where('html', 'footer')
+                        ->latest()
+                        ->first();
+
         $orders =  Order::with('order_lines')
                   ->where('not_active', false)
                   ->where('user_id', Auth::user()->id)
                   ->get();
-        return view('dashboard', compact('orders'));
+        return view('dashboard', compact('orders', 'footer'));
     }
     public function edit(Request $request): View
     {
+        $footer = Content::where('html', 'footer')
+                        ->latest()
+                        ->first();
+
         return view('profile.edit', [
             'user' => $request->user(),
+            'footer'=>$footer,
         ]);
     }
 
@@ -36,6 +46,10 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
+        $footer = Content::where('html', 'footer')
+                        ->latest()
+                        ->first();
+
         $request->user()->fill($request->validated());
 
 
