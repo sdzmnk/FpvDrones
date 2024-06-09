@@ -45,7 +45,7 @@
                     <li class="header__li"><a href="{{ route('main') }}#needItem" class="">Необхідні комплектуючі</li>
                     <li class="header__li"><a href="{{ route('main') }}#photoReport" class="">Фотозвіт</a></li>
                     <li class="header__li"><a href="{{ route('main') }}#footer" class="">Контакти</a></li>
-                    <li class="header__li"><a class="last_a" href="/html/MyProfile.html"><img src="/storage/media/user accountGREEN.png" alt=""></a></li>
+                    <li class="header__li"><a class="last_a" ><img src="/storage/media/user accountGREEN.png" alt=""></a></li>
                 </ol>
             </nav>
         </header>
