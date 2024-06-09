@@ -18,6 +18,7 @@ class InstructionStep extends Model implements HasMedia
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
         'description',
         'link',
         'img',

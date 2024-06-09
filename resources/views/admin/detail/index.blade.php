@@ -56,7 +56,7 @@
                     <td>{{ $detail['max_price'] }}</td>
                     <td>{{ $detail['need'] }}</td>
                     <td>{{ $detail['collected'] }}</td>
-                    <td>{{ $detail['drone_id'] }}</td>
+                    <td>{{ $detail['drone_id'] . "-". $detail->drone->name}}</td>
 
                     <!-- Кнопки редактирования и удаления рядом с каждой записью -->
                     <td class="no-export">

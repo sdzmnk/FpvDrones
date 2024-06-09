@@ -16,6 +16,7 @@ class MainController extends Controller
     public function index()
     {
         $contentData = Content::whereIn('html', ['header', 'overAboutUs', 'aboutUs', 'help', 'needItemTop', 'needItemBottom', 'footer'])
+        ->where('not_active', false)
         ->pluck('text', 'html');
 
         $drones = Drone::with('details')

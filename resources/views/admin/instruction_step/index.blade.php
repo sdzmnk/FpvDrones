@@ -41,7 +41,7 @@
                     <tr>
                         <td>{{ $instructionStep['id'] }}</td>
                         <td>{{$instructionStep['name'] }}</td>
-                        <td>{{ $instructionStep['instruction_id'] }}</td>
+                        <td>{{ $instructionStep['instruction_id']. "-". $instructionStep->instruction->name}}</td>
 
                         <td class="no-export">
                             <a class="btn btn-info btn-sm" href="{{ route('instruction_step.edit', $instructionStep['id']) }}">

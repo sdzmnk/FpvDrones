@@ -14,9 +14,12 @@ class ReportPhotoController extends Controller
      */
     public function index()
     {
-        $galleries  = Gallery::with('photos_to_gallery')
-        ->where('not_active', false)
+        $galleries  = Gallery::where('not_active', false)
         ->where('name', 'photoReport')
+        ->with(['photos_to_gallery' => function ($query) {
+            $query->where('not_active', false);
+        }])
+        ->latest()
         ->get();
 
         $footer = Content::where('html', 'footer')

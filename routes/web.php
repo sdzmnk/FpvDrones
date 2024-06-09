@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Content;
 use App\Models\Detail;
 use App\Models\Instruction;
+use App\Models\ModelHasRole;
 
 Route::get('/', [MainController::class, 'index'])->name('main');
 Route::post('/save-selected-details',  [MainController::class, 'saveSelectedDetails']);

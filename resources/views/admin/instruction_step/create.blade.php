@@ -32,11 +32,10 @@
                         @csrf
                         <div class="card-body">
 
-                            <div class="form-group">
-                                <label for="link">Назва</label>
-                                <input type="text"  name="name" class="form-control"
-                                    id="name" >
-                            </div>
+                        <div class="form-group">
+                            <label for="name">Назва</label>
+                            <input type="text" name = "name" class="form-control" id="name" placeholder="Введіть назву"></input>
+                        </div>
 
                         <div class="form-group">
                             <label for="description">Текст</label>

@@ -20,17 +20,19 @@ class InstructionController extends Controller
 
         $selectedDetailIds = $request->session()->get('selectedDetails', []);
 
-        // Выполняем запрос к базе данных, чтобы выбрать детали с соответствующими ID
         $selectedDetails = Detail::whereIn('id', $selectedDetailIds)->get();
 
-        $instruction =  Instruction::where('not_active', false)
+        $instruction = Instruction::where('not_active', false)
                                     ->where('name', 'mainInstruction')
-                                    ->with('steps')
+                                    ->with(['steps' => function ($query) {
+                                        $query->where('not_active', false);
+                                    }])
                                     ->latest()
                                     ->first();
         $user = Auth::user();
 
         $footer = Content::where('html', 'footer')
+                        ->where('not_active', false)
                         ->latest()
                         ->first();
 
@@ -51,45 +53,11 @@ class InstructionController extends Controller
      */
     public function store(Request $request)
     {
-
-        // if (!Auth::check()) {
-        //     // Если пользователь не авторизован, перенаправляем его на страницу входа
-        //     return redirect()->route('login');
-        // }
-
-        // $order = new Order();
-        // $order->date = now();
-        // $order->save();
-
-
-        // $selectedDetailIds = $request->session()->get('selectedDetails', []);
-
-        // foreach ($selectedDetailIds as $detailId) {
-        //     $quantity = $request->input('detail_' . $detailId);
-
-        //     $orderLine = new OrderLine();
-        //     $orderLine->order_id = $order->id;
-        //     $orderLine->detail_id = $detailId;
-        //     $orderLine->quantity_of_detail = $quantity;
-        //     $orderLine->save();
-        // }
-
-        // $request->session()->forget('selectedDetails');
-
-        // return redirect()->route('instruction.index')->with('success', 'Order placed successfully!');
-
-        if (!Auth::check()) {
-            // Если пользователь не авторизован, перенаправляем его на страницу входа
-            return redirect()->route('login');
-        }
-
-        // Создаем новый заказ
         $order = new Order();
         $order->user_id = Auth::id();
         $order->date = now();
         $order->save();
 
-        // Сохраняем выбранные детали для заказа
         foreach ($request->all() as $key => $value) {
             if (strpos($key, 'detail_') !== false) {
                 $detailId = str_replace('detail_', '', $key);
@@ -105,8 +73,7 @@ class InstructionController extends Controller
 
         $request->session()->forget('selectedDetails');
 
-        // Перенаправляем пользователя на страницу успешного оформления заказа
-        return redirect()->route('instruction.index')->with('success', 'Order placed successfully!');
+        return response()->json(['success' => true]);
 
     }
 

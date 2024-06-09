@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @font-face {
   font-family: "e-Ukraine";
   src: url("/fonts/e-Ukraine-Regular.woff2") format("woff2");
@@ -1278,5 +1278,1521 @@ body {
   }
   .container .footer div .footer_wrapper .footer__list1 li:last-child {
     margin: 0;
+  }
+}# sourceMappingURL=Instruction.css.map */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "e-Ukraine";
+  src: url("/fonts/e-Ukraine-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "e-Ukraine";
+  src: url("/fonts/e-Ukraine-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "e-Ukraine";
+  src: url("/fonts/e-Ukraine-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  background: linear-gradient(186.67deg, rgba(245, 245, 245, 0.4) 17.93%, rgba(71, 140, 92, 0.4) 62.19%, rgba(245, 245, 245, 0.4) 107.52%);
+}
+
+html {
+  font-size: 24px;
+}
+
+.container {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.container .header {
+  padding: 2.08vw 4.16vw 0 4.16vw;
+  margin-bottom: 140px;
+}
+.container .header .nav {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.container .header .nav .burger__container {
+  display: none;
+}
+.container .header .nav .header__logo {
+  width: 250px;
+  height: 100%;
+}
+.container .header .nav .header__ol {
+  display: flex;
+  align-items: center;
+}
+.container .header .nav .header__ol .header__li {
+  text-align: center;
+  margin-right: 3.125vw;
+}
+.container .header .nav .header__ol .header__li a {
+  text-decoration: none;
+  font: 400 22px "Manrope";
+  color: #1A5653;
+}
+.container .header .nav .header__ol .header__li a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #1A5653;
+}
+.container .header .nav .header__ol .header__li .last_a:hover {
+  border-bottom: 0;
+}
+.container .header .nav .header__ol .header__li:last-child {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+.container .header .nav .header__ol .header__li:last-child a {
+  display: flex;
+  align-items: center;
+}
+.container .header .nav .header__ol .header__li:last-child a span {
+  margin-right: 15px;
+  border-bottom: 1px solid black;
+}
+.container .header .nav .header__ol .header__li:last-child a img {
+  width: 2.5vw;
+  height: 2.5vw;
+}
+.container .header .header__navigation a, .container .header .header__navigation p {
+  color: grey;
+  text-decoration: none;
+  display: inline;
+  font: 400 18px "Manrope";
+}
+.container .header .header__navigation p {
+  color: #1A5653;
+}
+.container .main {
+  padding: 0 3.12vw;
+}
+.container .main .main__section1 .section1__container .section1__wrapper {
+  margin-bottom: 60px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(1) {
+  font: 700 42px "e-Ukraine";
+  margin-bottom: 60px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(2) {
+  font: 400 20px "Manrope";
+  margin-bottom: 30px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(3) {
+  font: 400 20px "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(4) {
+  font: 600 20px "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper .section1__button {
+  display: none;
+}
+.container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton {
+  display: none;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 60px;
+  gap: 1.56vw;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .wrapper2__block_photo {
+  max-width: 100%;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .wrapper2__block_photo img {
+  width: 100%;
+  height: 100%;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .wrapper2__block_photo:last-child {
+  display: none;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block {
+  background: #fff;
+  flex-grow: 1;
+  width: 44.79vw;
+  border-radius: 40px;
+  padding: 3.3vw 3.3vw 2.48vw 3.3vw;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.655vw;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text {
+  display: flex;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p {
+  font: 700 2.2vw "e-Ukraine";
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(4), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(3) {
+  color: grey;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(1) {
+  margin-right: 15px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button img {
+  cursor: pointer;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button .custom-prev {
+  margin-right: 3.125vw;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container {
+  max-width: 100%;
+  height: min-content;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper {
+  display: flex;
+  flex-direction: column;
+  height: 25vw;
+  width: 100%;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper {
+  flex: 1;
+  height: 300px;
+  height: min-content;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+  height: 150px;
+  position: relative;
+  height: min-content;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block-text p {
+  color: #000;
+  font: 400 1.4vw "Manrope";
+  margin-bottom: 20px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block {
+  height: 8.5vw;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-right: 20px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll {
+  display: flex;
+  justify-content: space-between;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll p, .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll select {
+  font: 600 1.3vw "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll select {
+  border: 0;
+  font: 600 1.3vw "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll select option {
+  font: 600 10px "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll2 {
+  height: 6.3vw;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll2 a {
+  display: inline-block;
+  font: 400 1.2vw "Manrope";
+  color: #058ED9;
+  margin-bottom: 10px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(2), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(3), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(5), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(6) {
+  font: 400 1.3vw "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
+  font: 400 1vw "Manrope";
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol {
+  list-style: inside;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol li {
+  margin-bottom: 10px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol li:last-child {
+  margin-bottom: 20px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) p:first-child {
+  margin-bottom: 30px;
+}
+.container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .pagination {
+  margin-top: 0;
+  --swiper-pagination-bullet-size: 1vw;
+  --swiper-pagination-bullet-width: 1vw;
+  --swiper-pagination-bullet-horizontal-gap: 7px;
+  --swiper-pagination-color: #1A5653;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .main__section1 .section1__container .section1__button {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 120px;
+}
+.container .main .main__section1 .section1__container .section1__button button {
+  cursor: pointer;
+  font: 600 1.4vw "Manrope";
+  color: #fff;
+  padding: 20px 60px;
+  border: 0;
+  background: #1A5653;
+  border-radius: 930px;
+}
+.container .footer {
+  padding: 3.12vw 6.16vw 4.25vw 4.16vw;
+  background: rgb(26, 86, 83);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.container .footer div {
+  display: flex;
+  justify-content: space-between;
+}
+.container .footer div .header__logo {
+  width: 250px;
+  height: 55px;
+}
+.container .footer div .footer_wrapper {
+  display: flex;
+}
+.container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+  font: 300 20px "Manrope";
+  color: rgb(245, 245, 245);
+  margin-bottom: 20px;
+}
+.container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
+  text-decoration: none;
+  color: rgb(245, 245, 245);
+}
+.container .footer div .footer_wrapper .footer__list1 li a:hover, .container .footer div .footer_wrapper .footer__list2 li a:hover {
+  border-bottom: 1.5px solid #fff;
+}
+.container .footer div .footer_wrapper .footer__list1 {
+  margin-right: 11.97vw;
+}
+.container .footer div .footer_wrapper .footer__list1 li:first-child {
+  font: 500 20px "Manrope";
+  margin-bottom: 67px;
+}
+.container .footer div .footer_wrapper .footer__list1 li:last-child {
+  margin: 0;
+}
+.container .footer div .footer_wrapper .footer__list2 li:last-child {
+  margin: 0;
+}
+
+.PopUp__container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.PopUp__container .PopUp {
+  z-index: 100;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 40px;
+  width: 870px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0 20000px;
+}
+.PopUp__container .PopUp .image__block {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.PopUp__container .PopUp .image__block .PopUp__cross:hover {
+  cursor: pointer;
+}
+.PopUp__container .PopUp .block__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PopUp__container .PopUp .block__text .PopUp__title {
+  width: max-content;
+  font-size: 1rem;
+  font: 400 1rem "Manrope";
+  margin-bottom: 60px;
+}
+.PopUp__container .PopUp .block__text .block__link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.PopUp__container .PopUp .block__text .block__link .PopUp__link {
+  background-color: #1A5653;
+  padding: 18px 60px;
+  border-radius: 999px;
+  color: #fff;
+  font: 400 1rem "Manrope";
+  text-decoration: none;
+}
+.PopUp__container .PopUp .block__text .block__link .PopUp__link:hover {
+  background-color: #23706c;
+}
+.PopUp__container .PopUp .block__text .block__subText {
+  display: flex;
+  justify-content: center;
+}
+.PopUp__container .PopUp .block__text .block__subText .subText_1, .PopUp__container .PopUp .block__text .block__subText .subText_2 {
+  font: 600 1rem "Manrope";
+  text-decoration: none;
+  color: #8C8C8C;
+}
+.PopUp__container .PopUp .block__text .block__subText .subText_1 {
+  margin-right: 15px;
+  font: 400 1rem "Manrope";
+}
+.PopUp__container .PopUp .block__text .block__subText .subText_2:hover {
+  border-bottom: 1.5px solid #8C8C8C;
+}
+
+.popUp_2 .PopUp .block__text .PopUp__title {
+  margin-bottom: 0;
+}
+.popUp_2 .PopUp .block__text .image__wrapper {
+  margin-top: 40px;
+}
+
+.swiper-slide1_block::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.swiper-slide1_block::-webkit-scrollbar-track {
+  background-color: #999;
+}
+
+.swiper-slide1_block::-webkit-scrollbar-track-piece {
+  background-color: #ffffff;
+}
+
+.swiper-slide1_block::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #666;
+  border-radius: 3px;
+}
+
+.swiper-slide1_block::-webkit-scrollbar-corner {
+  background-color: #999;
+}
+
+.section1__block2__container::-webkit-resizer {
+  background-color: #666;
+}
+
+@media screen and (max-width: 2510px) {
+  .container .header {
+    margin-bottom: 70px;
+  }
+  .container .header .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .header .nav .header__liFirst {
+    font: bold 24px "e-Ukraine";
+    margin-right: 40px;
+  }
+  .container .header .nav .header__ol {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 1.05vw "Manrope";
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    margin: 0;
+  }
+  .container .header .header__section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .container .header .header__section div h1 {
+    font: 700 38px "e-Ukraine";
+    margin-bottom: 50px;
+  }
+  .container .header .header__section div p {
+    font: 400 20px "Manrope";
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .container .header .header__section div div {
+    display: flex;
+    justify-content: center;
+  }
+  .container .header .header__section div div button {
+    border: 0;
+    padding: 8px 30px;
+    border-radius: 999px;
+  }
+  .container .header .header__section div div button a {
+    text-decoration: none;
+    text-align: center;
+    font: 600 20px "Manrope";
+    color: #000;
+  }
+  .container .footer {
+    padding: 4.12vw 7.16vw 6.25vw 4.16vw;
+    background: rgb(26, 86, 83);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .container .footer div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .footer div .header__liFirst {
+    font: bold 20px "e-Ukraine";
+    color: #fff;
+    margin-right: 40px;
+  }
+  .container .footer div .footer_wrapper {
+    display: flex;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+    font: 300 14px "Manrope";
+    margin-bottom: 20px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+  .container .footer div .footer_wrapper .footer__list1 {
+    margin-right: 7.97vw;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:first-child {
+    font: 500 16px "Manrope";
+    margin-bottom: 60px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:last-child {
+    margin: 0;
+  }
+  .container .footer div .footer_wrapper .footer__list2 li:last-child {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1610px) {
+  .container .header {
+    margin-bottom: 70px;
+  }
+  .container .header .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .container .header .nav .header__logo {
+    width: 200px;
+    margin-right: 30px;
+  }
+  .container .header .nav .header__ol {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 15px "Manrope";
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    margin: 0;
+  }
+  .container .header .header__navigation {
+    color: #1A5653;
+  }
+  .container .header .header__navigation a, .container .header .header__navigation p {
+    color: grey;
+    text-decoration: none;
+    display: inline;
+    font: 400 14px "Manrope";
+  }
+  .container .footer {
+    padding: 3.12vw 3.16vw 3.25vw 3.16vw;
+  }
+  .container .footer div .header__logo {
+    width: 200px;
+    height: 44px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+    font: 300 14px "Manrope";
+    margin-bottom: 10px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:first-child {
+    font: 500 16px "Manrope";
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .container .header__ol .header__li:last-child img {
+    width: 30px;
+    height: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__button button {
+    font: 500 14px "Manrope";
+    padding: 15px 45px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .container .header {
+    margin-bottom: 70px;
+  }
+  .container .header .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .container .header .nav .header__logo {
+    width: 120px;
+    margin-right: 30px;
+  }
+  .container .header .nav .header__ol {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 12px "Manrope";
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    margin: 0;
+  }
+  .container .header .header__navigation a, .container .header .header__navigation p {
+    color: grey;
+    text-decoration: none;
+    display: inline;
+    font: 400 10px "Manrope";
+  }
+  .container .header .header__navigation p {
+    color: #1A5653;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button .custom-prev, .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button .custom-next {
+    width: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .slide1__block_scroll2 a {
+    margin-bottom: 0px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .pagination {
+    --swiper-pagination-bullet-horizontal-gap: 3px;
+  }
+  .container .footer {
+    padding: 3.12vw 5.16vw 3.25vw 4.16vw;
+  }
+  .container .footer div .header__logo {
+    width: 120px;
+    height: 27px;
+  }
+  .container .footer div .footer_wrapper {
+    height: 110px;
+  }
+  .container .footer div .footer_wrapper .footer__list1, .container .footer div .footer_wrapper .footer__list2 {
+    height: 100%;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+    font: 300 10px "Manrope";
+    margin-bottom: 5px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+  .container .footer div .footer_wrapper .footer__list1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:first-child {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    font: 500 12px "Manrope";
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .container .header {
+    margin-bottom: 70px;
+  }
+  .container .header .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .header .nav .header__ol {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 10px "Manrope";
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+  }
+  .container .header .nav .header__ol .header__li:last-child a {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li:last-child a span {
+    margin-right: 10px;
+  }
+  .container .header .nav .header__ol .header__li:last-child a img {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+  .container .header .header__navigation a, .container .header .header__navigation p {
+    font-size: 8px;
+  }
+  .PopUp__container {
+    padding: 0 10px;
+  }
+  .PopUp__container .PopUp {
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 650px;
+  }
+  .PopUp__container .PopUp .image__block {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 25px;
+  }
+  .PopUp__container .PopUp .image__block .PopUp__cross {
+    height: 22px;
+  }
+  .PopUp__container .PopUp .image__block .PopUp__cross:hover {
+    cursor: pointer;
+  }
+  .PopUp__container .PopUp .block__text .PopUp__title {
+    width: max-content;
+    font: 400 0.83rem "Manrope";
+    margin-bottom: 45px;
+  }
+  .PopUp__container .PopUp .block__text .block__link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .PopUp__container .PopUp .block__text .block__link .PopUp__link {
+    padding: 13px 40px;
+    font: 400 0.83rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__link .PopUp__link:hover {
+    background-color: #23706c;
+  }
+  .PopUp__container .PopUp .block__text .block__subText {
+    display: flex;
+    justify-content: center;
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_1, .PopUp__container .PopUp .block__text .block__subText .subText_2 {
+    font: 600 0.83rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_1 {
+    margin-right: 15px;
+    font: 400 0.83rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_2:hover {
+    border-bottom: 1.5px solid #8C8C8C;
+  }
+  .popUp_2 .PopUp .block__text .PopUp__title {
+    margin-bottom: 0;
+  }
+  .popUp_2 .PopUp .block__text .image__wrapper {
+    margin-top: 30px;
+  }
+  .popUp_2 .PopUp .block__text .image__wrapper img {
+    height: 65px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .container .header {
+    padding: 4.16vw 4.16vw 0 4.16vw;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+    height: auto;
+  }
+  .container .header .nav {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .container .header .nav .header__logo_off {
+    display: none;
+  }
+  .container .header .nav .header__logo {
+    margin: 0;
+  }
+  .container .header .nav .burger__container {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .container .header .nav .burger__container .burger__block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper {
+    width: 30px;
+    height: min-content;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div {
+    border-bottom: 2px solid #1A5653;
+    margin-bottom: 5px;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div:nth-child(3) {
+    margin: 0;
+  }
+  .container .header .nav .burger__container .burger__block .header__liFirst1 {
+    font: bold 16px "e-Ukraine";
+    color: #1A5653;
+  }
+  .container .header .nav .burger__container .burger__block .burger__profile img {
+    width: 30px;
+    height: 30px;
+  }
+  .container .header .nav .burger__container .burger__block2 {
+    display: none;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    height: min-content;
+  }
+  .container .header .nav .burger__container .burger__block2 .header__ol1 {
+    position: static;
+    display: block;
+    width: min-content;
+    height: min-content;
+  }
+  .container .header .nav .burger__container .burger__block2 .header__ol1 .header__li1 {
+    text-align: center;
+    display: block;
+    position: static;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .container .header .nav .burger__container .burger__block2 .header__ol1 .header__li1 a {
+    text-decoration: none;
+    font: 400 25px "Manrope";
+    color: #fff;
+  }
+  .container .header .nav .header__ol {
+    display: none;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    display: block;
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 10px "Manrope";
+    color: #fff;
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    display: block;
+    margin: 0;
+  }
+  .container .header .nav .header__ol .header__li:last-child img {
+    width: 30px;
+    height: 30px;
+  }
+  .container .main {
+    padding: 0 4.16vw;
+    max-width: 100vw;
+    margin-bottom: 50px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(1) {
+    font: 700 20px "e-Ukraine";
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(2) {
+    font: 400 14px "Manrope";
+    margin-bottom: 15px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(3) {
+    font: 400 14px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(4) {
+    font: 600 14px "Manrope";
+    margin-bottom: 40px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__button button {
+    display: block;
+    width: 100%;
+    font: 600 14px "Manrope";
+    color: #fff;
+    padding: 10px 0;
+    border: 0;
+    background: #1A5653;
+    border-radius: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__button:first-child {
+    display: block;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton {
+    display: flex;
+    justify-content: end;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton button {
+    cursor: pointer;
+    font: 500 16px "Manrope";
+    padding: 0;
+    border: none;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton button img {
+    width: 15px;
+    height: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton button span {
+    margin-right: 5px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .wrapper2__block_photo {
+    order: 2;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block {
+    order: 1;
+    margin-bottom: 20px;
+    height: min-content;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text {
+    display: flex;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p {
+    font: 700 25px "e-Ukraine";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(4), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(3) {
+    color: grey;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(1) {
+    margin-right: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button {
+    display: none;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button .custom-prev {
+    margin-right: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container {
+    max-width: 100%;
+    height: auto;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper {
+    height: min-content;
+    width: 100%;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper {
+    height: auto;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide {
+    font: 400 14px "Manrope";
+    margin-right: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+    height: auto;
+    height: min-content;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block-text p {
+    color: #000;
+    font: 400 15px "Manrope";
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block {
+    height: 100px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test {
+    height: 100%;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll p, .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll select {
+    margin-bottom: 5px;
+    height: min-content;
+    font: 600 15px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll select {
+    border: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll select option {
+    width: 20px;
+    font: 600 12px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll2 {
+    height: auto;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll2 a {
+    display: inline-block;
+    font: 400 14px "Manrope";
+    color: #058ED9;
+    margin-bottom: 5px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(2), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(3), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(5), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(6) {
+    font: 400 14px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
+    font: 400 12px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol {
+    list-style: inside;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol li {
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol li:last-child {
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) p:first-child {
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .pagination {
+    margin-top: 30px;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 3px;
+    --swiper-pagination-color: #1A5653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .main .main__section1 .section1__button:last-child {
+    display: none;
+    justify-content: end;
+    margin-bottom: 0;
+  }
+  .container .main .main__section1 .section1__button:last-child button {
+    display: none;
+    font: 600 24px "Manrope";
+    color: #fff;
+    padding: 14px 60px;
+    border: 0;
+    background: #1A5653;
+    border-radius: 30px;
+  }
+  .container .footer {
+    padding: 3.12vw 6.16vw 3.25vw 4.16vw;
+  }
+  .container .footer div .header__logo {
+    width: 120px;
+    height: 27px;
+  }
+  .container .footer div .footer_wrapper {
+    height: 90px;
+  }
+  .container .footer div .footer_wrapper .footer__list1, .container .footer div .footer_wrapper .footer__list2 {
+    height: 100%;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+    font: 300 8px "Manrope";
+    margin-bottom: 5px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+  .container .footer div .footer_wrapper .footer__list1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:first-child {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    font: 500 10px "Manrope";
+    margin-bottom: 0;
+  }
+  .PopUp__container {
+    padding: 0 10px;
+  }
+  .PopUp__container .PopUp {
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .PopUp__container .PopUp .image__block {
+    margin-bottom: 25px;
+  }
+  .PopUp__container .PopUp .image__block .PopUp__cross {
+    height: 16px;
+  }
+  .PopUp__container .PopUp .block__text .PopUp__title {
+    width: max-content;
+    font: 400 0.58rem "Manrope";
+    margin-bottom: 35px;
+  }
+  .PopUp__container .PopUp .block__text .block__link {
+    margin-bottom: 20px;
+  }
+  .PopUp__container .PopUp .block__text .block__link .PopUp__link {
+    padding: 10px 30px;
+    font: 400 0.58rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_1, .PopUp__container .PopUp .block__text .block__subText .subText_2 {
+    font: 600 0.58rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_1 {
+    margin-right: 15px;
+    font: 400 0.58rem "Manrope";
+  }
+  .popUp_2 .PopUp .block__text .PopUp__title {
+    margin-bottom: 0;
+  }
+  .popUp_2 .PopUp .block__text .image__wrapper {
+    margin-top: 30px;
+  }
+  .popUp_2 .PopUp .block__text .image__wrapper img {
+    height: 55px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container .header {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 4.16vw 4.16vw 0 4.16vw;
+  }
+  .container .header .nav {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .header .nav .burger__container {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .container .header .nav .burger__container .burger__block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block {
+    display: flex;
+    align-items: center;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper {
+    width: 30px;
+    height: min-content;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div {
+    border-bottom: 2px solid #1A5653;
+    margin-bottom: 5px;
+  }
+  .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div:nth-child(3) {
+    margin: 0;
+  }
+  .container .header .nav .burger__container .burger__block .header__liFirst1 {
+    font: bold 16px "e-Ukraine";
+    color: #1A5653;
+  }
+  .container .header .nav .burger__container .burger__block .burger__profile img {
+    width: 30px;
+    height: 30px;
+  }
+  .container .header .nav .burger__container .burger__block2 {
+    display: none;
+  }
+  .container .header .nav .burger__container .burger__block2 .header__ol1 {
+    position: static;
+    display: block;
+    width: min-content;
+    height: min-content;
+  }
+  .container .header .nav .burger__container .burger__block2 .header__ol1 .header__li1 {
+    text-align: center;
+    display: block;
+    position: static;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .container .header .nav .burger__container .burger__block2 .header__ol1 .header__li1 a {
+    text-decoration: none;
+    font: 400 25px "Manrope";
+    color: #fff;
+  }
+  .container .header .nav .header__ol {
+    display: none;
+    align-items: center;
+  }
+  .container .header .nav .header__ol .header__li {
+    display: block;
+    margin-right: 3.125vw;
+  }
+  .container .header .nav .header__ol .header__li a {
+    text-decoration: none;
+    font: 400 10px "Manrope";
+    color: #fff;
+  }
+  .container .header .nav .header__ol .header__li:last-child {
+    display: block;
+    margin: 0;
+  }
+  .container .header .nav .header__ol .header__li:last-child img {
+    width: 30px;
+    height: 30px;
+  }
+  .container .main {
+    padding: 0 4.16vw;
+    max-width: 100vw;
+    margin-bottom: 50px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(1) {
+    font: 700 20px "e-Ukraine";
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(2) {
+    font: 400 14px "Manrope";
+    margin-bottom: 15px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(3) {
+    font: 400 14px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__text:nth-child(4) {
+    font: 600 14px "Manrope";
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__button button {
+    display: block;
+    width: 100%;
+    font: 600 14px "Manrope";
+    color: #fff;
+    padding: 10px 0;
+    border: 0;
+    background: #1A5653;
+    border-radius: 30px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__button:first-child {
+    display: block;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton {
+    display: flex;
+    justify-content: end;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton button {
+    font: 500 16px "Manrope";
+    padding: 0;
+    border: none;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton button img {
+    width: 15px;
+    height: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper .section1__nextButton button span {
+    margin-right: 5px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 {
+    margin-bottom: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block {
+    margin-bottom: 20px;
+    height: auto;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.655vw;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text {
+    display: flex;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p {
+    font: 700 5.2vw "e-Ukraine";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(4), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(3) {
+    color: grey;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .wrapper2__counter_text p:nth-child(1) {
+    margin-right: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button {
+    display: none;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .wrapper2__counter_block .custom-button .custom-prev {
+    margin-right: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container {
+    max-width: 100%;
+    height: 100%;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper {
+    width: 100%;
+    height: min-content;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper {
+    height: min-content;
+    margin-bottom: 25px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide {
+    font: 400 3.4vw "Manrope";
+    margin-right: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+    height: auto;
+    height: min-content;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block-text p {
+    color: #000;
+    font: 400 3.4vw "Manrope";
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block {
+    height: 27vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test {
+    height: 22vw;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll p, .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll select {
+    height: min-content;
+    font: 600 3.3vw "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll select {
+    border: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll select option {
+    font: 600 12px "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll2 {
+    height: 6.3vw;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(1) .swiper-slide1_block .test .slide1__block_scroll2 a {
+    display: inline-block;
+    font: 400 3.2vw "Manrope";
+    color: #058ED9;
+    margin-bottom: 0;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(2), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(3), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(5), .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(6) {
+    font: 400 3.3vw "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
+    font: 400 2.8vw "Manrope";
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol {
+    list-style: inside;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol li {
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) ol li:last-child {
+    margin-bottom: 20px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .swiper-wrapper .swiper-slide:nth-child(4) p:first-child {
+    margin-bottom: 10px;
+  }
+  .container .main .main__section1 .section1__container .section1__wrapper2 .section1__swipee_block .swiper__container .swiper .pagination {
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 3px;
+    --swiper-pagination-color: #1A5653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .main .main__section1 .section1__button:last-child {
+    display: none;
+    justify-content: end;
+    margin-bottom: 0;
+  }
+  .container .main .main__section1 .section1__button:last-child button {
+    display: none;
+    font: 600 24px "Manrope";
+    color: #fff;
+    padding: 14px 60px;
+    border: 0;
+    background: #1A5653;
+    border-radius: 30px;
+  }
+  .container .footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  .container .footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .footer div .header__logo {
+    margin-bottom: 20px;
+  }
+  .container .footer div .footer_wrapper {
+    height: auto;
+    display: block;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
+    text-align: center;
+    font: 300 9px "Manrope";
+    margin-bottom: 5px;
+  }
+  .container .footer div .footer_wrapper .footer__list1 {
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: min-content;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:first-child {
+    font: 500 10px "Manrope";
+    margin-bottom: 12px;
+    flex: 0;
+  }
+  .container .footer div .footer_wrapper .footer__list1 li:last-child {
+    margin: 0;
+  }
+  .PopUp__container {
+    padding: 0 10px;
+  }
+  .PopUp__container .PopUp {
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+  .PopUp__container .PopUp .image__block {
+    margin-bottom: 20px;
+  }
+  .PopUp__container .PopUp .image__block .PopUp__cross {
+    height: 16px;
+  }
+  .PopUp__container .PopUp .block__text .PopUp__title {
+    font: 400 0.4rem "Manrope";
+    margin-bottom: 30px;
+  }
+  .PopUp__container .PopUp .block__text .block__link {
+    margin-bottom: 15px;
+  }
+  .PopUp__container .PopUp .block__text .block__link .PopUp__link {
+    padding: 10px 30px;
+    font: 400 0.4rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_1, .PopUp__container .PopUp .block__text .block__subText .subText_2 {
+    font: 600 0.4rem "Manrope";
+  }
+  .PopUp__container .PopUp .block__text .block__subText .subText_1 {
+    margin-right: 15px;
+    font: 400 0.4rem "Manrope";
+  }
+  .popUp_2 .PopUp .block__text .PopUp__title {
+    margin-bottom: 0;
+  }
+  .popUp_2 .PopUp .block__text .image__wrapper {
+    margin-top: 20px;
+  }
+  .popUp_2 .PopUp .block__text .image__wrapper img {
+    height: 36px;
   }
 }/*# sourceMappingURL=Instruction.css.map */

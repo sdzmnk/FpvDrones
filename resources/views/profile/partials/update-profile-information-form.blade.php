@@ -16,7 +16,7 @@
 
                 <div class="block2__wrapper1">
                     <div class="block2__name">
-                        <input id="name" name="name" type="text" value="{{ old('name', $user->name ?? '') }}" required autofocus autocomplete="name"></input>
+                        <input id="name" name="name" type="text" value="{{ old('name', $user->surname . ' ' . $user->name ?? '') }}" required autofocus autocomplete="name"></input>
                     </div>
                     <div class="block2__name">
                         <input  id="email" name="email" type="email" value="{{ old('email', $user->email ?? '') }}" required autocomplete="username" ></input>
@@ -62,10 +62,10 @@
             <div class="block2__wrapper2">
                 <div class="block2__info_block">
                     <div class="block2__name">
-                        <input  id="phone_number" name="phone_number" type="text" value="{{ old('phone_number', $user->phone_number ?? '') }}"  required autocomplete="phone_number" ></input>
+                        <input  id="phone_number" name="phone_number" placeholder="Номер телефону" type="text" value="{{ old('phone_number', $user->phone_number ?? '') }}"  autocomplete="phone_number" ></input>
                     </div>
                     <div class="block2__name">
-                        <input  id="country" name="country" type="text" value="{{ old('country', $user->country ?? '') }}"  required autocomplete="country" ></input>
+                        <input  id="country" name="country"  placeholder="Країна" type="text" value="{{ old('country', $user->country ?? '') }}"  autocomplete="country" ></input>
                     </div>
                 </div>
                 <div class="block2__changeInfo">

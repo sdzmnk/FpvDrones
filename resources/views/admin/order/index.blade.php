@@ -40,7 +40,13 @@
                     @foreach ($orders as $order)
                     <tr>
                         <td>{{ $order['id'] }}</td>
-                        <td>{{$order['user_id'] }}</td>
+                        <td>
+                            @if ($order->user) <!-- Перевіряємо, чи існує користувач -->
+                            {{ $order->user_id }} - {{ $order->user->email }}
+                            @else
+                                Користувач не знайдений <!-- Якщо користувача не знайдено -->
+                            @endif
+                        </td>
                         <td>{{ $order['date'] }}</td>
 
                         <td class="no-export">

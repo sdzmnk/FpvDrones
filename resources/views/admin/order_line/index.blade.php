@@ -34,7 +34,6 @@
                   <th>Замовлення ID</th>
                   <th>Деталь ID</th>
                   <th>Кількість деталей</th>
-                  <th>Дата</th>
                   <th class="no-export">Дія</th>
                 </tr>
                 </thead>
@@ -43,7 +42,7 @@
                     <tr>
                         <td>{{ $orderLine['id'] }}</td>
                         <td>{{$orderLine['order_id'] }}</td>
-                        <td>{{ $orderLine['detail_id'] }}</td>
+                        <td>{{$orderLine['detail_id']  . ' - ' . $orderLine->detail->name}}</td>
                         <td>{{ $orderLine['quantity_of_detail'] }}</td>
 
                         <td class="no-export">
@@ -65,11 +64,10 @@
 
                 <tfoot>
                 <tr>
-                    <th>ID</th>
+                <th>ID</th>
                   <th>Замовлення ID</th>
                   <th>Деталь ID</th>
                   <th>Кількість деталей</th>
-                  <th>Дата</th>
                 </tr>
                 </tfoot>
               </table>

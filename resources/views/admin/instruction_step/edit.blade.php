@@ -35,8 +35,7 @@
 
                                 <div class="form-group">
                                     <label for="name">Назва</label>
-                                    <input type="text" value="{{ $instructionStep['name'] }}" name="name" class="form-control"
-                                        id="name" >
+                                    <input type="text" class="form-control" name = "name" id="name" value="{{ $instructionStep['name'] }}"></input>
                                 </div>
 
                                 <div class="form-group">

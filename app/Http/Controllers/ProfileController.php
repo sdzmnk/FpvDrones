@@ -47,14 +47,30 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
         $footer = Content::where('html', 'footer')
-                        ->latest()
-                        ->first();
+        ->latest()
+        ->first();
 
-        $request->user()->fill($request->validated());
+        // Розділити ім'я та прізвище
+        if (strpos($request->name, ' ') !== false) {
+            $name_parts = explode(' ', $request->name);
+            $last_name = $name_parts[0];
+            $first_name = isset($name_parts[1]) ? $name_parts[1] : null;
+        } else {
+            $first_name = $request->name;
+            $last_name = null;
+        }
 
+        // Оновити дані користувача
+        $request->user()->fill([
+        'name' => $first_name,
+        'surname'=>$last_name,
+        'email' => $request->email,
+        'phone_number' => $request->phone_number,
+        'country' => $request->country,
+        ]);
 
         if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        $request->user()->email_verified_at = null;
         }
 
         $request->user()->save();
