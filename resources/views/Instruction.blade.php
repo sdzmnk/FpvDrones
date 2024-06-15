@@ -70,7 +70,7 @@
                             echo $instruction->description;
                         ?>
                         <div class="section1__button">
-                            <button button id="confirmOrderButton" form="myForm" type="submit">Підтвердити замовлення</button>
+                            <button button id="confirmOrderButton1" form="myForm" type="submit">Підтвердити замовлення</button>
                         </div>
                         <div class="section1__nextButton">
                             <button class="buttonStep">Крок <span id="stepCounter">2</span><img src="/storage/media/стрілка чорна.png" alt=""></button>
@@ -276,6 +276,58 @@
             <script>
 
                 document.querySelector('#confirmOrderButton').addEventListener('click', function(event) {
+                    event.preventDefault(); // Скасувати стандартну відправку форми
+
+                    // Перевірка, чи користувач авторизований
+                    var isAuthenticated = {{ $user ? 'true' : 'false' }};
+
+                    if (isAuthenticated) {
+                        // Отримуємо дані форми
+                        var formData = new FormData(document.getElementById('myForm'));
+
+                        // Відправляємо дані форми через AJAX
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', '{{ route("instruction.store") }}', true);
+                        xhr.onload = function() {
+                            // Перевірка статусу відповіді
+                            if (xhr.status >= 200 && xhr.status < 400) {
+                                // Успішно відправлено
+                                // Показуємо спливаюче вікно про підтвердження замовлення
+                                document.querySelector('.popUp_2').style.display = "block";
+                                document.querySelector('.container').style.height = "100vh";
+                            } else {
+                                // Помилка під час відправки
+                                console.error('Сталася помилка при відправленні даних форми');
+                            }
+                        };
+                        xhr.onerror = function() {
+                            // Помилка під час відправки
+                            console.error('Сталася помилка при відправленні даних форми');
+                        };
+                        xhr.send(formData);
+                    } else {
+                        // Користувач не авторизований - показати повідомлення про необхідність реєстрації
+                        document.querySelector('.popUp_1').style.display = "block";
+                        document.querySelector('.container').style.height = "100vh";
+                    }
+                });
+
+                // Додаємо обробник подій для закриття спливаючого вікна та перенаправлення на головну сторінку
+                document.querySelectorAll('.PopUp__cross').forEach(cross => {
+                    cross.addEventListener('click', function() {
+                        document.querySelector('.popUp_1').style.display = "none";
+                        document.querySelector('.popUp_2').style.display = "none";
+                        document.querySelector('.container').style.height = "auto";
+
+                        // Перенаправлення користувача на головну сторінку
+                        window.location.href = '{{ route("main") }}';
+                    });
+                });
+            </script>
+
+            <script>
+
+                document.querySelector('#confirmOrderButton1').addEventListener('click', function(event) {
                     event.preventDefault(); // Скасувати стандартну відправку форми
 
                     // Перевірка, чи користувач авторизований

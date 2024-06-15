@@ -106,6 +106,18 @@
                 <div class="section1__changeProfile_block">
                     <a href="{{ route('profile.edit') }}" class="section1__changeProfile">Редагувати профіль</a>
                 </div>
+                <div  class="section1__changeProfile_block" style="margin-left: 10px;" >
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();"
+                                            style="color: white; text-decoration: none;"  class="section1__changeProfile">
+                            {{ __('Вийти') }}
+                        </a>
+                    </form>
+                </div>
             </section>
 
         </main>
