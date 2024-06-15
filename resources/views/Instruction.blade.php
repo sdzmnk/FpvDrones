@@ -24,9 +24,11 @@
                             </div>
                         </div>
                         <img class="header__logo " src="/storage/media/logo-title_Green.png"/>
-                        <a class="burger__profile" href="/html/MyProfile.html">
-                            <img src="/storage/media/userAccountBgGreen.png"alt="">
-                        </a>
+                        @auth
+                            <a class="burger__profile" href="{{ route('dashboard') }}"><img src="/storage/media/user accountGREEN.png" alt=""></a>
+                        @else
+                            <a class="burger__profile" href="{{ route('register') }}"><img src="/storage/media/user accountGREEN.png" alt=""></a>
+                        @endauth
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
@@ -50,9 +52,9 @@
                     <li class="header__li"><a href="{{route('main')}}#footer" class="">Контакти</a></li>
                     <li class="header__li">
                     @auth
-                        <a class="last_a" href="{{ route('dashboard') }}"><span>{{ auth()->user()->name }}</span><img src="/img/user accountGREEN.png" alt=""></a>
+                        <a class="last_a" href="{{ route('dashboard') }}"><span>{{ auth()->user()->name }}</span><img src="/storage/media/user accountGREEN.png" alt=""></a>
                     @else
-                        <a href="{{ route('register') }}"><img src="/img/user accountGREEN.png" alt=""></a>
+                        <a href="{{ route('register') }}"><img src="/storage/media/user accountGREEN.png" alt=""></a>
                     @endauth
                     </li>
                 </ol>
