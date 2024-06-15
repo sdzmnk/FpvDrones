@@ -70,7 +70,7 @@
                             echo $instruction->description;
                         ?>
                         <div class="section1__button">
-                            <button type="text" form="myForm">Підтвердити замовлення</button>
+                            <button button id="confirmOrderButton" form="myForm" type="submit">Підтвердити замовлення</button>
                         </div>
                         <div class="section1__nextButton">
                             <button class="buttonStep">Крок <span id="stepCounter">2</span><img src="/storage/media/стрілка чорна.png" alt=""></button>
