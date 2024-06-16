@@ -36,11 +36,11 @@
                     <div class="burger__block2">
                         <ol class='header__ol1'>
                             <li class="header__li1"><a href="{{ route('main') }}" class="">Головна</a></li>
-                            <li class="header__li1"><a href="#aboutUs" class="">Про нас</a></li>
-                            <li class="header__li1"><a href="#help" class="">Як допомогти</a></li>
-                            <li class="header__li1"><a href="#needItem" class="">Необхідні комплектуючі</li>
-                            <li class="header__li1"><a href="#photoReport" class="">Фотозвіт</a></li>
-                            <li class="header__li1"><a href="#footer" class="">Контакти</a></li>
+                            <li class="header__li1"><a href="{{route('main')}}#aboutUs" class="">Про нас</a></li>
+                            <li class="header__li1"><a href="{{route('main')}}#help" class="">Як допомогти</a></li>
+                            <li class="header__li1"><a href="{{route('main')}}#needItem" class="">Необхідні комплектуючі</li>
+                            <li class="header__li1"><a href="{{route('main')}}#photoReport" class="">Фотозвіт</a></li>
+                            <li class="header__li1"><a href="{{route('main')}}#footer" class="">Контакти</a></li>
                         </ol>
                     </div>
                 </div>
@@ -48,11 +48,11 @@
                 <img class="header__logo header__logo_off" src="/storage/media/logo-title.png"/>
                 <ol class='header__ol'>
                     <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
-                    <li class="header__li"><a href="#aboutUs" class="">Про нас</a></li>
-                    <li class="header__li"><a href="#help" class="">Як допомогти</a></li>
-                    <li class="header__li"><a href="#needItem" class="">Необхідні комплектуючі</li>
-                    <li class="header__li"><a href="#photoReport" class="">Фотозвіт</a></li>
-                    <li class="header__li"><a href="#footer" class="">Контакти</a></li>
+                    <li class="header__li"><a href="{{route('main')}}#aboutUs" class="">Про нас</a></li>
+                    <li class="header__li"><a href="{{route('main')}}#help" class="">Як допомогти</a></li>
+                    <li class="header__li"><a href="{{route('main')}}#needItem" class="">Необхідні комплектуючі</li>
+                    <li class="header__li"><a href="{{route('main')}}#photoReport" class="">Фотозвіт</a></li>
+                    <li class="header__li"><a href="{{route('main')}}#footer" class="">Контакти</a></li>
                     <li class="header__li">
                         @auth
                             <a href="{{ route('dashboard') }}"><img src="/storage/media/user accountIcons.png" alt=""></a>

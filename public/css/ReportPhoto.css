@@ -956,9 +956,6 @@
     display: flex;
     justify-content: center;
     padding: 40px 0;
-    background: rgb(26, 86, 83);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
   .container .footer div {
     display: flex;
@@ -969,29 +966,25 @@
     margin-bottom: 20px;
   }
   .container .footer div .footer_wrapper {
+    height: auto;
     display: block;
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
     text-align: center;
-    font: 300 9px "Manrope";
+    font: 300 11px "Manrope";
     margin-bottom: 5px;
-  }
-  .container .footer div .footer_wrapper .footer__list1 li a, .container .footer div .footer_wrapper .footer__list2 li a {
-    text-decoration: none;
-    color: rgb(245, 245, 245);
   }
   .container .footer div .footer_wrapper .footer__list1 {
     margin-right: 0;
     margin-bottom: 20px;
+    height: min-content;
   }
   .container .footer div .footer_wrapper .footer__list1 li:first-child {
-    font: 500 10px "Manrope";
+    font: 500 12px "Manrope";
     margin-bottom: 12px;
+    flex: 0;
   }
   .container .footer div .footer_wrapper .footer__list1 li:last-child {
-    margin: 0;
-  }
-  .container .footer div .footer_wrapper .footer__list2 li:last-child {
     margin: 0;
   }
 }/*# sourceMappingURL=ReportPhoto.css.map */

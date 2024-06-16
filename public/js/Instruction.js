@@ -34,19 +34,19 @@ li1.forEach((item) => {
 });
 
 
-instructionCustomPrev.addEventListener('click', () => handleButton(instructionCustomPrev));
-instructionCustomNext.addEventListener('click', () => handleButton(instructionCustomNext));
+// instructionCustomPrev.addEventListener('click', () => handleButton(instructionCustomPrev));
+// instructionCustomNext.addEventListener('click', () => handleButton(instructionCustomNext));
 
 
-instructionCustomPrev.addEventListener('click' , ()=> {
-    Value(instructionCustomPrev)
-})
-instructionCustomNext.addEventListener('click' , ()=> {
-    Value(instructionCustomNext)
-})
-buttonStep.addEventListener('click' , ()=> {
-    Value(instructionCustomNext)
-})
+// instructionCustomPrev.addEventListener('click' , ()=> {
+//     Value(instructionCustomPrev)
+// })
+// instructionCustomNext.addEventListener('click' , ()=> {
+//     Value(instructionCustomNext)
+// })
+// buttonStep.addEventListener('click' , ()=> {
+//     Value(instructionCustomNext)
+// })
 
 
 // let section1__button = document.querySelectorAll('.button')

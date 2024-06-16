@@ -241,8 +241,6 @@
             <script>
                 const instructionCounter = document.querySelector(".wrapper2__counter1");
                 const stepCounter = document.getElementById('stepCounter');
-                const instructionCustomPrev = document.querySelector(".custom-prev");
-                const instructionCustomNext = document.querySelector(".custom-next");
                 const photoInstruction = document.getElementById('wrapper2__change_photo');
 
                 let counterValue = 1;
@@ -250,22 +248,27 @@
                 const totalSteps = {{ $instruction->steps->count() }};
                 const steps = @json($instruction->steps);
 
-                instructionCustomPrev.addEventListener('click', () => changeStep(-1));
-                instructionCustomNext.addEventListener('click', () => changeStep(1));
 
-                function changeStep(direction) {
-                    counterValue += direction;
-                    if (counterValue < 1) {
-                        counterValue = totalSteps;
-                    } else if (counterValue > totalSteps) {
-                        counterValue = 1;
-                    }
+                swiper.on('slideChange', function() {
+                    counterValue = swiper.realIndex + 1;
                     stepCounterValue = counterValue;
 
                     instructionCounter.textContent = counterValue;
                     stepCounter.textContent = stepCounterValue;
                     photoInstruction.src = steps[counterValue - 1].img;
-                }
+
+
+                    let nextSlideIndex = counterValue + 1;
+                    if (nextSlideIndex > totalSteps) {
+                        nextSlideIndex = 1;
+                    }
+                    document.querySelector('#stepCounter').textContent = nextSlideIndex;
+                });
+
+
+                document.querySelector('.buttonStep').addEventListener('click', function() {
+                    swiper.slideNext();
+                });
             </script>
             <script src="/js/Instruction.js">
                 const instructionSteps = @json($instruction->steps);
