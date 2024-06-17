@@ -260,7 +260,7 @@
     margin-bottom: 10px;
   }
   .container .header .nav .header__logo {
-    width: 120px;
+    width: 168px;
     margin-right: 30px;
   }
   .container .header .nav .header__ol {
@@ -414,7 +414,7 @@
     height: 2.5vw;
   }
   .container .header .header__navigation a, .container .header .header__navigation p {
-    font-size: 8px;
+    font-size: 16px;
   }
   .container .main {
     overflow: auto;
@@ -653,8 +653,8 @@
     padding: 3.12vw 6.16vw 3.25vw 4.16vw;
   }
   .container .footer div .header__logo {
-    width: 120px;
-    height: 27px;
+    width: 234px;
+    height: 50px;
   }
   .container .footer div .footer_wrapper {
     height: 90px;
@@ -708,18 +708,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 2vh;
+    margin-bottom: 40px;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block {
     display: flex;
     align-items: center;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper {
-    width: 30px;
+    width: 40px;
     height: min-content;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div {
     border-bottom: 2px solid #1A5653;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div:nth-child(3) {
     margin: 0;
@@ -729,8 +731,8 @@
     color: #1A5653;
   }
   .container .header .nav .burger__container .burger__block .burger__profile img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   .container .header .nav .burger__container .burger__block2 {
     display: none;
@@ -851,7 +853,7 @@
     align-items: center;
   }
   .container .footer div .header__logo {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   .container .footer div .footer_wrapper {
     height: auto;
@@ -859,17 +861,17 @@
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
     text-align: center;
-    font: 300 9px "Manrope";
+    font: 300 15px "Manrope";
     margin-bottom: 5px;
   }
   .container .footer div .footer_wrapper .footer__list1 {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     height: min-content;
   }
   .container .footer div .footer_wrapper .footer__list1 li:first-child {
-    font: 500 10px "Manrope";
-    margin-bottom: 12px;
+    font: 500 16px "Manrope";
+    margin-bottom: 30px;
     flex: 0;
   }
   .container .footer div .footer_wrapper .footer__list1 li:last-child {

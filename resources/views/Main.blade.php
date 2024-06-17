@@ -26,7 +26,6 @@
                             </div>
                         </div>
                         <img class="header__logo " src="/storage/media/logo-title.png"/>
-                        <a class="burger__profile">
                             @auth
                                 <a href="{{ route('dashboard') }}"><img src="/storage/media/user accountIcons.png" alt=""></a>
                             @else
@@ -35,19 +34,19 @@
                     </div>
                     <div class="burger__block2">
                         <ol class='header__ol1'>
-                            <li class="header__li1"><a href="{{ route('main') }}" class="">Головна</a></li>
-                            <li class="header__li1"><a href="{{route('main')}}#aboutUs" class="">Про нас</a></li>
-                            <li class="header__li1"><a href="{{route('main')}}#help" class="">Як допомогти</a></li>
-                            <li class="header__li1"><a href="{{route('main')}}#needItem" class="">Необхідні комплектуючі</li>
-                            <li class="header__li1"><a href="{{route('main')}}#photoReport" class="">Фотозвіт</a></li>
-                            <li class="header__li1"><a href="{{route('main')}}#footer" class="">Контакти</a></li>
+                            <li class="header__li1"><a href="{{route('main')}}" class="">Головна</a></li>
+                            <li class="header__li1"><a href="#aboutUs" class="">Про нас</a></li>
+                            <li class="header__li1"><a href="#help" class="">Як допомогти</a></li>
+                            <li class="header__li1"><a href="#needItem" class="">Необхідні комплектуючі</li>
+                            <li class="header__li1"><a href="#photoReport" class="">Фотозвіт</a></li>
+                            <li class="header__li1"><a href="#footer" class="">Контакти</a></li>
                         </ol>
                     </div>
                 </div>
 
                 <img class="header__logo header__logo_off" src="/storage/media/logo-title.png"/>
                 <ol class='header__ol'>
-                    <li class="header__li"><a href="{{ route('main') }}" class="">Головна</a></li>
+                    <li class="header__li"><a href="{{ route('main')}}" class="">Головна</a></li>
                     <li class="header__li"><a href="{{route('main')}}#aboutUs" class="">Про нас</a></li>
                     <li class="header__li"><a href="{{route('main')}}#help" class="">Як допомогти</a></li>
                     <li class="header__li"><a href="{{route('main')}}#needItem" class="">Необхідні комплектуючі</li>
@@ -73,7 +72,7 @@
 
 
         <main class="main">
-            <section class="main__section1" id="overAboutUs" >
+            <section id="overAboutUs" class="main__section1" id="overAboutUs" >
                 <?php
                     echo $contentData['overAboutUs']
                 ?>
@@ -124,13 +123,13 @@
                                                         <div class='block3__slide_subtext2'>
                                                             <div>
                                                                 <p class='block3__name_slide'>{{ $detail->description }}</p>
-                                                                <p class='block3__price_slide'>{{ number_format($detail->min_price, 0, '.', '') }} - {{ number_format($detail->max_price, 0, '.', '') }}</p>
+                                                                <p class='block3__price_slide'>{{ number_format($detail->min_price, 0, '.', '') }} - {{ number_format($detail->max_price, 0, '.', '') }} грн</p>
                                                             </div>
                                                             <img class="clickCircle" src="/storage/media/sircleEmptyXl.png" alt="" data-status="empty">
                                                         </div>
                                                         <div class='block3__slide_subtext3'>
                                                             <p>Запчастина: {{ $detail->name }}</p>
-                                                            <p>{{ $detail->model }}</p>
+                                                            <p>Модель: {{ $detail->model }}</p>
                                                         </div>
                                                     </div>
                                                 </div>

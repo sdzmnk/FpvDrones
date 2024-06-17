@@ -221,7 +221,7 @@ body {
   font: 400 80px "Manrope";
   border-right: 1px solid #000;
   color: rgb(26, 86, 83);
-  margin-right: 1.04vw;
+  margin-right: 10px;
 }
 .container .main .main__section3 .section3__container .section3__block1 .section3__block_text .section3__text2 {
   font: 400 30px "Manrope";
@@ -1095,8 +1095,8 @@ body {
     margin: 0;
   }
   .container .header .nav .burger__container .burger__block .header__logo {
-    width: 120px;
-    height: 26px;
+    width: 168px;
+    height: 36px;
     margin: 0;
   }
   .container .header .nav .burger__container .burger__block .burger__profile img {
@@ -1208,7 +1208,7 @@ body {
     width: 100%;
   }
   .container .main .main__section2 .section2__container .section2__bloc_text .swiper .swiper-wrapper .swiper-slide .section2__container_text .section2__text {
-    font: 400 10px "Manrope";
+    font: 400 16px "Manrope";
     margin-bottom: 10px;
   }
   .container .main .main__section2 .section2__container .section2__bloc_text .swiper .swiper-wrapper .swiper-slide .section2__container_text .section2__text:nth-child(4) {
@@ -1246,7 +1246,7 @@ body {
     gap: 10px;
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__block_title {
-    font: 500 12px "Manrope";
+    font: 500 24px "Manrope";
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
@@ -1411,8 +1411,8 @@ body {
     padding: 3.12vw 6.16vw 3.25vw 4.16vw;
   }
   .container .footer div .header__logo {
-    width: 120px;
-    height: 27px;
+    width: 234px;
+    height: 50px;
   }
   .container .footer div .footer_wrapper {
     height: 90px;
@@ -1469,17 +1469,18 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    margin-top: 2vh;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block {
     display: flex;
     align-items: center;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper {
-    width: 30px;
+    width: 40px;
     height: min-content;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .container .header .nav .burger__container .burger__block .burder__logo_block .burder__logo_wrapper div:nth-child(3) {
     margin: 0;
@@ -1489,8 +1490,8 @@ body {
     color: #fff;
   }
   .container .header .nav .burger__container .burger__block .burger__profile img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   .container .header .nav .burger__container .burger__block2 {
     display: none;
@@ -1552,20 +1553,20 @@ body {
   }
   .container .header .header__section div div h1 {
     width: min-content;
-    font: 700 23px "e-Ukraine";
+    font: 700 40px "e-Ukraine";
     margin-bottom: 20px;
     display: block;
   }
   .container .header .header__section div p {
-    font: 400 14px "Manrope";
+    font: 400 20px "Manrope";
     margin-bottom: 20px;
   }
   .container .header .header__section div div button {
     border: 0;
-    padding: 4px 25px;
+    padding: 12px 37px 12px 37px;
   }
   .container .header .header__section div div button a {
-    font: 600 14px "Manrope";
+    font: 600 16px "Manrope";
   }
   .container .main .main__section1 {
     margin-bottom: 40px;
@@ -1573,15 +1574,15 @@ body {
     display: block;
   }
   .container .main .main__section1 .section1__container {
-    gap: 10px;
+    gap: 15px;
     margin-right: 0;
-    justify-content: space-between;
+    justify-content: start;
   }
   .container .main .main__section1 .section1__container .section1_oneText {
-    font: 400 50px "Manrope";
+    font: 400 70px "Manrope";
   }
   .container .main .main__section1 .section1__container .section1_twoText {
-    font: 400 16px "Manrope";
+    font: 400 20px "Manrope";
   }
   .container .main .main__section2 {
     margin: 0;
@@ -1590,7 +1591,7 @@ body {
     margin-bottom: 0;
   }
   .container .main .main__section2 .section2__container .section2__title {
-    font: 700 20px "e-Ukraine";
+    font: 700 32px "e-Ukraine";
     margin-bottom: 20px;
   }
   .container .main .main__section2 .section2__container .section2__bloc_text {
@@ -1633,7 +1634,7 @@ body {
     margin-bottom: 40px;
   }
   .container .main .main__section3 .section3__title {
-    font: 700 20px "e-Ukraine";
+    font: 700 32px "e-Ukraine";
     margin-bottom: 30px;
   }
   .container .main .main__section3 .section3__block_title {
@@ -1652,8 +1653,11 @@ body {
     margin-bottom: 15px;
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__button {
-    font: 500 11px "Manrope";
+    display: block;
+    text-align: center;
+    font: 500 16px "Manrope";
     padding: 1.5vw 4.2vw;
+    width: 100%;
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__block {
     border-bottom: 2px solid #000;
@@ -1665,24 +1669,24 @@ body {
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__block_text .section3__text1 {
     padding: 0;
-    width: 15px;
-    font: 400 20px "Manrope";
+    width: 50px;
+    font: 400 70px "Manrope";
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__block_text .section3__text2 {
-    font: 400 12px "Manrope";
+    font: 400 20px "Manrope";
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__block_text .section3__text3 {
-    font: 400 9px "Manrope";
+    font: 400 16px "Manrope";
   }
   .container .main .main__section3 .section3__container .section3__block1 .section3__margin_bottom {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
   .container .main .main__section3 .section3__container .section3__block2 {
     border-radius: 10px;
     border: 1px solid #000;
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_title {
-    font: 500 14px "Manrope";
+    font: 500 24px "Manrope";
     border-bottom: 2px solid #a7a7a7;
     padding-bottom: 10px;
     color: rgb(0, 21, 24);
@@ -1692,14 +1696,14 @@ body {
     padding: 1.5vw 1vw;
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block .section3__block2_addMoney1 .section3__block2__link {
-    font: 600 11px "Manrope";
+    font: 600 16px "Manrope";
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block1, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_bloc2 {
     margin-bottom: 15px;
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block .section3__block2__text1, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block1 .section3__block2__text1, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_bloc2 .section3__block2__text1 {
     margin-bottom: 5px;
-    font: 400 12px "Manrope";
+    font: 400 20px "Manrope";
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block .section3__block2_addMoney2, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block1 .section3__block2_addMoney2, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_bloc2 .section3__block2_addMoney2 {
     align-items: center;
@@ -1707,7 +1711,7 @@ body {
     justify-content: space-between;
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block .section3__block2_addMoney2 .section3__block2_text3, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block1 .section3__block2_addMoney2 .section3__block2_text3, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_bloc2 .section3__block2_addMoney2 .section3__block2_text3 {
-    font: 400 12px "Manrope";
+    font: 400 16px "Manrope";
   }
   .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block .section3__block2_addMoney2 div img, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_block1 .section3__block2_addMoney2 div img, .container .main .main__section3 .section3__container .section3__block2 .section3__block2_text_bloc2 .section3__block2_addMoney2 div img {
     transform: scale(0.6);
@@ -1726,7 +1730,7 @@ body {
     margin-bottom: 15px;
   }
   .container .main .main__section4 .section4__container .section4__block .section4__block_text {
-    font: 700 18px "e-Ukraine";
+    font: 700 32px "e-Ukraine";
   }
   .container .main .main__section4 .section4__container .section4__block div {
     display: none;
@@ -1744,7 +1748,7 @@ body {
   .container .main .main__section4 .section4__container .section4__block2 button {
     width: 100%;
     border: 1px solid black;
-    font: 300 14px "Manrope";
+    font: 300 15px "Manrope";
     padding: 5px 7px;
   }
   .container .main .main__section4 .section4__container .section4__block2 button:first-child {
@@ -1780,17 +1784,17 @@ body {
     margin-bottom: 20px;
   }
   .container .main .main__section4 .section4__container .section4__block3 .mySwiper .swiper-wrapper .swiper-slide .section4__block3_content .section4__block3__slide .block3__slide_subtext p {
-    font: 600 10px "Manrope";
+    font: 600 16px "Manrope";
   }
   .container .main .main__section4 .section4__container .section4__block3 .mySwiper .swiper-wrapper .swiper-slide .section4__block3_content .section4__block3__slide .block3__slide_subtext2 {
     margin-bottom: 10px;
     height: min-content;
   }
   .container .main .main__section4 .section4__container .section4__block3 .mySwiper .swiper-wrapper .swiper-slide .section4__block3_content .section4__block3__slide .block3__slide_subtext2 div .block3__name_slide {
-    font: 400 14px "Manrope";
+    font: 400 20px "Manrope";
   }
   .container .main .main__section4 .section4__container .section4__block3 .mySwiper .swiper-wrapper .swiper-slide .section4__block3_content .section4__block3__slide .block3__slide_subtext2 div .block3__price_slide {
-    font: 400 12px "Manrope";
+    font: 400 16px "Manrope";
   }
   .container .main .main__section4 .section4__container .section4__block3 .mySwiper .swiper-wrapper .swiper-slide .section4__block3_content .section4__block3__slide .block3__slide_subtext2 img {
     margin: 0;
@@ -1798,7 +1802,7 @@ body {
     height: 40px;
   }
   .container .main .main__section4 .section4__container .section4__block3 .mySwiper .swiper-wrapper .swiper-slide .section4__block3_content .section4__block3__slide .block3__slide_subtext3 p {
-    font: 400 10px "Manrope";
+    font: 400 16px "Manrope";
   }
   .container .main .main__section4 .section4__container .section4__slide_button {
     margin-bottom: 20px;
@@ -1814,7 +1818,7 @@ body {
     justify-content: space-Between;
   }
   .container .main .main__section4 .section4__container .section4__subSlideInfo p {
-    font: 400 12px "Manrope";
+    font: 400 15px "Manrope";
   }
   .container .main .main__section4 .section4__container .section4__subSlideInfo div {
     margin-bottom: 20px;
@@ -1827,7 +1831,7 @@ body {
     width: 100%;
   }
   .container .main .main__section4 .section4__container .section4__subSlideInfo div a {
-    font: 400 12px "Manrope";
+    font: 400 16px "Manrope";
   }
   .container .main .main__section4 .section4__container .section4__subSlideInfo div:last-child {
     display: none;
@@ -1842,7 +1846,7 @@ body {
     margin-bottom: 30px;
   }
   .container .main .main__section5 .section5__container .section5__block_info .section5__block_title {
-    font: 700 18px "e-Ukraine";
+    font: 700 32px "e-Ukraine";
   }
   .container .main .main__section5 .section5__container .section5__block_info div {
     display: none;
@@ -1899,7 +1903,7 @@ body {
     align-items: center;
   }
   .container .footer div .header__logo {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   .container .footer div .footer_wrapper {
     height: auto;
@@ -1907,17 +1911,17 @@ body {
   }
   .container .footer div .footer_wrapper .footer__list1 li, .container .footer div .footer_wrapper .footer__list2 li {
     text-align: center;
-    font: 300 11px "Manrope";
+    font: 300 15px "Manrope";
     margin-bottom: 5px;
   }
   .container .footer div .footer_wrapper .footer__list1 {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     height: min-content;
   }
   .container .footer div .footer_wrapper .footer__list1 li:first-child {
-    font: 500 12px "Manrope";
-    margin-bottom: 12px;
+    font: 500 16px "Manrope";
+    margin-bottom: 30px;
     flex: 0;
   }
   .container .footer div .footer_wrapper .footer__list1 li:last-child {
